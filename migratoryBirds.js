@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/migratory-birds/problem
+
 const migratoryBirds = (arr) => {
     let tipos = [1, 2, 3, 4, 5];
     let cantidad = [0, 0, 0, 0, 0];
