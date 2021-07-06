@@ -13,7 +13,7 @@ function howManyGames(p, d, m, s) {
     let games = 0;
     while (s >= 0) {
         s -= p;
-        p = Math.max(p - d, m);
+        p = Math.max(p - d, m); // El método Math.max devuelve el mayor entre 2 números
         games += 1;
     }
     console.log(games - 1);
