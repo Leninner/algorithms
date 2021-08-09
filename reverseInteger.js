@@ -26,3 +26,26 @@ reverse(-120); // -21
 reverse(7894); // 4987
 reverse(544561564054531231); // 0
 reverse(78454564654); // 0
+
+// Otra solución similar, con menos uso en memoria y 5 ms más.
+
+var reverse = function (x) {
+    if (
+        parseInt(x.toString().split("").reverse().join("")) > 2 ** 31 ||
+        parseInt(x.toString().split("").reverse().join("")) < (-2) ** 31
+    ) {
+        return 0;
+    } else if (x < 0) {
+        return (
+            parseInt(x.toString().split("").reverse().join("")) -
+            parseInt(x.toString().split("").reverse().join("")) * 2
+        );
+    } else {
+        return parseInt(x.toString().split("").reverse().join(""));
+    }
+};
+
+console.log(reverse(45));
+console.log(reverse(0));
+console.log(reverse(67984321354654));
+console.log(reverse(-123));
