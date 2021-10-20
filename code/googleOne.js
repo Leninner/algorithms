@@ -18,15 +18,16 @@
 // @param S mensaje codificado
 
 function decodificar(A, S) {
-    let i = A[0],
-        finalString = S[0];
+  let i = A[0],
+    finalString = S[0];
 
-    while (finalString.length < A.length) {
-        finalString += S[i];
-        i = A[i];
-    }
-    console.log(finalString);
+  while (finalString.length < A.length) {
+    finalString += S[i];
+    i = A[i];
+  }
+
+  console.log(finalString);
 }
 
-decodificar([3, 2, 0, 1], "cdeo"); // code
-decodificar([5, 2, 0, 1, 6, 4, 8, 3, 7], "cdeenetpi"); // centipede
+decodificar([3, 2, 0, 1], 'cdeo'); // code
+decodificar([5, 2, 0, 1, 6, 4, 8, 3, 7], 'cdeenetpi'); // centipede
