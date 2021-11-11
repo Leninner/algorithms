@@ -11,6 +11,7 @@ function pageCount(n, p) {
   if (p == n || p == 1) {
     console.log(0);
   } else {
+    // p OR (q AND r)
     if (n - p < p - 1 || (n - p == p - 1 && n % 2 != 0)) {
       // Si llego más rápido por atrás entonces
       for (let i = n; i >= p; i--) {

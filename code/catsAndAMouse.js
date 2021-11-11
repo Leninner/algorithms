@@ -3,13 +3,13 @@
 //z = Mouse C
 
 function catAndMouse(x, y, z) {
-    if (Math.abs(z - x) > Math.abs(z - y)) {
-        console.log("Cat B");
-    } else if (Math.abs(z - x) < Math.abs(z - y)) {
-        console.log("Cat A");
-    } else {
-        console.log("Mouse C");
-    }
+  if (Math.abs(z - x) > Math.abs(z - y)) {
+    console.log('Cat B');
+  } else if (Math.abs(z - x) < Math.abs(z - y)) {
+    console.log('Cat A');
+  } else {
+    console.log('Mouse C');
+  }
 }
 
 catAndMouse(2, 2, 5);
