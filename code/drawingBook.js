@@ -8,6 +8,7 @@
 
 function pageCount(n, p) {
   let giroPaginas = 0;
+  // p OR q
   if (p == n || p == 1) {
     console.log(0);
   } else {
