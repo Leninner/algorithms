@@ -10,7 +10,7 @@ const birthday = (s, d, m) => {
       contadorBarras++;
     }
   }
-  console.log(contadorBarras);
+
   return contadorBarras;
 };
 
