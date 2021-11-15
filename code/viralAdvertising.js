@@ -6,16 +6,16 @@
 //contar la cantidad de likes que hay.
 //NOTE: Nivel Easy
 
-function strangeAdvertising(days) {
-    let people = 5;
-    let likes;
-    let finalLikes = 0;
-    for (let i = 1; i <= n; i++) {
-        likes = Math.floor(people / 2);
-        people = likes * 3;
-        finalLikes += likes;
-    }
-    return finalLikes;
-}
+const strangeAdvertising = (days) => {
+  let people = 5;
+  let likes;
+  let finalLikes = 0;
+  for (let i = 1; i <= days; i++) {
+    likes = Math.floor(people / 2);
+    people = likes * 3;
+    finalLikes += likes;
+  }
+  return finalLikes;
+};
 
-strangeAdvertising(5);
+export { strangeAdvertising };

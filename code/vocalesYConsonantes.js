@@ -1,16 +1,20 @@
-function vowelsAndConsonants(s) {
-  const vowels = 'aeiou';
-  var consonants = '';
+/**
+ *
+ * @param {string} s
+ * @returns {string} Retornar solo las consonantes del string s
+ */
 
-  for (var i = 0; i < s.length; i++) {
-    if (vowels.includes(s[i])) {
-      console.log(s[i]);
-    } else {
-      consonants += s[i] + '\n';
+const vowelsAndConsonants = (s) => {
+  const vowels = 'aeiouáéíóú';
+  let consonants = '';
+
+  for (let i = 0; i < s.length; i++) {
+    if (!vowels.includes(s[i])) {
+      consonants += s[i];
     }
   }
 
-  console.log(consonants.trim());
-}
+  return consonants;
+};
 
-vowelsAndConsonants('Lenin Mazabanda. ¿Cómo estás?');
+export { vowelsAndConsonants };
