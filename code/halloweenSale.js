@@ -6,39 +6,39 @@
 // int s: the starting budget
 
 function howManyGames(p, d, m, s) {
-    // Return the number of games you can buy
+  // Return the number of games you can buy
 
-    // NOTE: Solución correcta
+  // NOTE: Solución correcta
 
-    let games = 0;
-    while (s >= 0) {
-        s -= p;
-        p = Math.max(p - d, m); // El método Math.max devuelve el mayor entre 2 números
-        games += 1;
-    }
-    console.log(games - 1);
+  let games = 0;
+  while (s >= 0) {
+    s -= p;
+    p = Math.max(p - d, m); // El método Math.max devuelve el mayor entre 2 números
+    games += 1;
+  }
+  console.log(games - 1);
 
-    // NOTE: Solución deficiente
+  // NOTE: Solución deficiente
 
-    // let suma = 0,
-    //     cont = 0;
-    // for (let i = p; i > m; i -= d) {
-    //     cont++;
-    //     suma += i;
-    // }
+  // let suma = 0,
+  //     cont = 0;
+  // for (let i = p; i > m; i -= d) {
+  //     cont++;
+  //     suma += i;
+  // }
 
-    // if (suma == s) {
-    //     return cont;
-    // } else {
-    //     while (suma <= s) {
-    //         cont++;
-    //         suma += m;
-    //         if (suma >= s) {
-    //             cont--;
-    //         }
-    //     }
-    //     return cont;
-    // }
+  // if (suma == s) {
+  //     return cont;
+  // } else {
+  //     while (suma <= s) {
+  //         cont++;
+  //         suma += m;
+  //         if (suma >= s) {
+  //             cont--;
+  //         }
+  //     }
+  //     return cont;
+  // }
 }
 
 howManyGames(20, 3, 6, 70); // 5 games
