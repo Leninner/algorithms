@@ -4,7 +4,9 @@
   "description": "Solución a algunos ejercicios de Hackerrank, Leetcode, Codewars y otras plataformas de codificación.",
   "main": "angryProfessor.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "preupdate": "git commit -a  -m '[UPDATE] files'",
+    "update": "git push"
   },
   "repository": {
     "type": "git",

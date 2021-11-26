@@ -1,7 +1,7 @@
 // https://www.hackerrank.com/challenges/picking-numbers/problem?isFullScreen=true/
 
 /**
- *
+ * 0 < a.length < 100
  * @param {*} a array of numbers
  * @returns {number} el array más largo de números que al restarse y sacar su absoluto el resultado es <= 1
  */
@@ -14,6 +14,7 @@ const pickingNumbers = (a) => {
     let index = a[i];
     frecuencia[index]++; // frecuencia[index] = frecuencia[index] + 1;
   }
+
   for (let i = 1; i <= 100; i++) {
     result = Math.max(result, frecuencia[i] + frecuencia[i - 1]);
   }
