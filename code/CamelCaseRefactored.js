@@ -1,7 +1,7 @@
 /*
  * Complete the 'camelcase' function below.
  *
- * The function is expected to return an INTEGER.
+ * The function is expected to return an INTEGER with the number of word in the function.
  * The function accepts STRING s as parameter.
  */
 
