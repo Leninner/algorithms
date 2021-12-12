@@ -1,6 +1,6 @@
 import { fibonacciInArray } from '../code/fibonacci.js';
 
-describe('Serie de fibanacci', () => {
+xdescribe('Serie de fibanacci', () => {
   test('Debe funcionar', () => {
     expect(fibonacciInArray(1)).toStrictEqual([1]);
     expect(fibonacciInArray(2)).toStrictEqual([1, 1]);
