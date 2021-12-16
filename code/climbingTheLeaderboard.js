@@ -8,21 +8,16 @@
  */
 
 function climbingLeaderboard(ranked, player) {
-  // Write your code here
+  let rankedRefactorized = Array.from(new Set(ranked));
+  let results = [];
 
-  let result = ranked.concat(player).sort((a, b) => b - a);
+  for (let i = 0; i < player.length; i++) {
+    rankedRefactorized.push(player[i]);
+    rankedRefactorized.sort((a, b) => b - a);
+    results.push(rankedRefactorized.indexOf(player[i]) + 1);
+  }
 
-  let unique = [...new Set(result)]; // Función para encontrar los valores únicos de un array, no funciona con un array de strings u objetos
-
-  let valores = {};
-
-  unique.forEach((element, index) => {
-    if (element === player[player.indexOf(element)]) {
-      valores[element] = index + 1;
-    }
-  });
-
-  return Object.values(valores);
+  return results;
 }
 
 export { climbingLeaderboard };
@@ -51,5 +46,3 @@ export { climbingLeaderboard };
 
 //   return positions;
 // }
-
-// console.log(climbingLeaderboard([100, 90, 90, 80, 75, 60], [50, 65, 77, 90, 102]));
