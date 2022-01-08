@@ -23,8 +23,10 @@ Solución a algunos ejercicios de Hackerrank, Leetcode, Codewars y otras platafo
 1. Primero que nada clona el repo en tu computadora con la siguiente línea:
 
 ```bash
-git clone repo
+git clone https://github.com/Leninner/solutionExercises.git
 ```
+
+> Debes tener instalado node en su última versión: https://nodejs.org/es/
 
 2. Luego, dentro de la carpeta vamos a abrir la terminal y ejecutamos:
 
