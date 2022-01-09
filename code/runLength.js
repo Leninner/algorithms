@@ -13,3 +13,16 @@ export const runLength = (str) => {
 
   return contAndLetters.flat().join('');
 };
+
+export const runLenghtDecode = (str) => {
+  let result = '';
+  for (let i = 0; i < str.length; i += 2) {
+    console.log(str[i], str[i + 1]);
+
+    for (let y = 0; y < parseInt(str[i]); y++) {
+      result += str[i + 1];
+    }
+  }
+
+  return result;
+};
