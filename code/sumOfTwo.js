@@ -13,7 +13,13 @@
 // return val;
 
 const sumOfTwo = (arr, k) => {
-  return arr.some((value) => arr.includes(k - value)); // comprueban si hay algún para de números que cumplen la condicion de sumar k
+  return arr.some((value, index) => {
+    if (arr.includes(k - value) && index !== arr.indexOf(k - value)) {
+      return true;
+    } else {
+      return false;
+    }
+  }); // comprueban si hay algún para de números que cumplen la condicion de sumar k
 };
 
 export default sumOfTwo;
