@@ -1,6 +1,7 @@
 /**
  * Este algoritmo hace una búsqueda lineal para encontrar un elemento en un arreglo.
  * Complejidad temporal = O(n +  3) = O(n)
+ * Complexidad espacial = O(1)
  */
 
 function linearSearch(array, target) {

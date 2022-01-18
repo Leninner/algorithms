@@ -1,28 +1,29 @@
 /**
  * Este algoritmo hace un ordenamiento por selección para encontrar un elemento en un arreglo.
  * Complejidad temporal = O(n^2 + 8) = O(n^2)
+ * Complexidad espacial = O(n)
+ * Espacio auxiliar = Complexidad espacial - espacio temporal = O(1)
  */
 
 function selectionSort(array) {
+  // O(n)
   for (let i = 0; i < array.length; i++) {
-    // O (n)
-    let min = i; // O (1)
+    // O(1)
+    let min = i; // O(1)
 
     for (let j = i + 1; j < array.length; j++) {
-      // O (n)
+      // O(1)
       if (array[j] < array[min]) {
-        // O (1)
-        min = j; // O (1)
+        min = j;
       }
     }
 
     if (min !== i) {
-      // O (1)
-      let tmp = array[i]; // O (1)
-      array[i] = array[min]; // O (1)
-      array[min] = tmp; // O (1)
+      let tmp = array[i]; // O(1)
+      array[i] = array[min];
+      array[min] = tmp;
     }
   }
 
-  return array; // O (1)
+  return array;
 }
