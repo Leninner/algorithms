@@ -21,3 +21,15 @@ const highAndLow = (numbers) => {
 
   return [max, min].join(' ');
 };
+
+// another solution
+
+const highAndLow2 = (numbers) => {
+  const arrayOfNumbers = numbers.split(' ').map(Number);
+  const max = Math.max(...arrayOfNumbers);
+  const min = Math.min(...arrayOfNumbers);
+
+  return `${max} ${min}`;
+};
+
+console.log(highAndLow2('4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'));
