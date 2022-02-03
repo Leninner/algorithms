@@ -9,15 +9,15 @@
 <div align="center">
   <h3>
     <a href="https://shoppingify-project.vercel.app/">
-      Demo
+      Code
     </a>
     <span> | </span>
     <a href="https://github.com/Leninner/shoppingify-list">
-      Solution
+      Test
     </a>
     <span> | </span>
     <a href="https://devchallenges.io/challenges/mGd5VpbO4JnzU6I9l96x">
-      Challenge
+      Feedback
     </a>
   </h3>
 </div>
