@@ -14,13 +14,13 @@ xdescribe('Strange counter in basketball', () => {
   ];
 
   const edgeCases = [
-    ['1', '2', '+', 'D', 'C'],
-    ['1', '2', '+', 'D', 'C', 'D'],
-    ['1', '2', '+', 'D', 'C', 'D', 'C'],
-    ['1', '2', '+', 'D', 'C', 'D', 'C', 'D'],
-    ['1', '2', '+', 'D', 'C', 'D', 'C', 'D', 'C'],
-    ['1', '2', '+', 'D', 'C', 'D', 'C', 'D', 'C', 'D'],
-    ['1', '2', '+', 'D', 'C', 'D', 'C', 'D', 'C', 'D', 'C'],
+    [['1', '2', '+', 'D', 'C'], 6],
+    [['1', '2', '+', 'D', 'C', 'D'], 12],
+    [['1', '2', '+', 'D', 'C', 'D', 'C'], 6],
+    [['1', '2', '+', 'D', 'C', 'D', 'C', 'D'], 12],
+    [['1', '2', '+', 'D', 'C', 'D', 'C', 'D', 'C'], 6],
+    [['1', '2', '+', 'D', 'C', 'D', 'C', 'D', 'C', 'D'], 12],
+    [['1', '2', '+', 'D', 'C', 'D', 'C', 'D', 'C', 'D', 'C'], 6],
   ];
 
   test('Should return correct answers', () => {
@@ -31,17 +31,13 @@ xdescribe('Strange counter in basketball', () => {
   });
 
   test('Should return correct answers with edge cases', () => {
-    expect(strangeScore(edgeCases[0])).toBe(6);
-    expect(strangeScore(edgeCases[1])).toBe(12);
-    expect(strangeScore(edgeCases[2])).toBe(6);
-    expect(strangeScore(edgeCases[3])).toBe(12);
-    expect(strangeScore(edgeCases[4])).toBe(6);
-    expect(strangeScore(edgeCases[5])).toBe(12);
-    expect(strangeScore(edgeCases[6])).toBe(6);
+    edgeCases.forEach(([ops, result]) => {
+      expect(strangeScore(ops)).toBe(result);
+    });
   });
 });
 
-xdescribe('Verify if the brackets are correct', () => {
+describe('Verify if the brackets are correct', () => {
   const testCases = [
     ['(()())', true],
     ['(()()', false],
@@ -86,38 +82,14 @@ describe('Move N spaces in an array', () => {
   ];
 
   test('Should return correct answers. This should work with rotate clockwise', () => {
-    expect(moveNPositionClockwise(testCasesClockwise[0][0], testCasesClockwise[0][1])).toEqual(
-      testCasesClockwise[0][2]
-    );
-    expect(moveNPositionClockwise(testCasesClockwise[1][0], testCasesClockwise[1][1])).toEqual(
-      testCasesClockwise[1][2]
-    );
-    expect(moveNPositionClockwise(testCasesClockwise[2][0], testCasesClockwise[2][1])).toEqual(
-      testCasesClockwise[2][2]
-    );
-    expect(moveNPositionClockwise(testCasesClockwise[3][0], testCasesClockwise[3][1])).toEqual(
-      testCasesClockwise[3][2]
-    );
-    expect(moveNPositionClockwise(testCasesClockwise[4][0], testCasesClockwise[4][1])).toEqual(
-      testCasesClockwise[4][2]
-    );
+    testCasesClockwise.forEach(([number, input, output]) => {
+      expect(moveNPositionClockwise(number, input)).toEqual(output);
+    });
   });
 
   test('Should return correct answers. This should work with rotate counter clockwise', () => {
-    expect(moveNPositionCounterClockwise(testCasesCounterClockwise[0][0], testCasesCounterClockwise[0][1])).toEqual(
-      testCasesCounterClockwise[0][2]
-    );
-    expect(moveNPositionCounterClockwise(testCasesCounterClockwise[1][0], testCasesCounterClockwise[1][1])).toEqual(
-      testCasesCounterClockwise[1][2]
-    );
-    expect(moveNPositionCounterClockwise(testCasesCounterClockwise[2][0], testCasesCounterClockwise[2][1])).toEqual(
-      testCasesCounterClockwise[2][2]
-    );
-    expect(moveNPositionCounterClockwise(testCasesCounterClockwise[3][0], testCasesCounterClockwise[3][1])).toEqual(
-      testCasesCounterClockwise[3][2]
-    );
-    expect(moveNPositionCounterClockwise(testCasesCounterClockwise[4][0], testCasesCounterClockwise[4][1])).toEqual(
-      testCasesCounterClockwise[4][2]
-    );
+    testCasesCounterClockwise.forEach(([number, input, output]) => {
+      expect(moveNPositionCounterClockwise(number, input)).toEqual(output);
+    });
   });
 });

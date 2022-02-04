@@ -50,7 +50,10 @@ export const moveNPositionClockwise = (k, nums) => {
   return [...portion, ...nums];
 };
 
-export const moveNPositionCounterClockwise = (k, nums) => {};
+export const moveNPositionCounterClockwise = (k, nums) => {
+  const portion = nums.splice(0, k);
+  return nums.concat(portion);
+};
 
 const sumLeftLeavesInABinaryTree = (root) => {
   if (!root) return 0;
