@@ -24,6 +24,8 @@ export const comprobateBrackets = (str) => {
   let isCorrect = true;
 
   for (let i = 1; i < array.length; i++) {
+    if (array[i] === ']' || array[i] === '}' || array[i] === ')') return false;
+
     if (array[i] === '(' || array[i] === '[' || array[i] === '{') {
       stack.push(array[i]);
     } else if (
