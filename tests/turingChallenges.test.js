@@ -1,4 +1,4 @@
-import { strangeScore } from '../code/turingChallenges.js';
+import { strangeScore, comprobateBrackets } from '../code/turingChallenges.js';
 
 xdescribe('Strange counter in basketball', () => {
   const testCases = [
@@ -33,5 +33,37 @@ xdescribe('Strange counter in basketball', () => {
     expect(strangeScore(edgeCases[4])).toBe(6);
     expect(strangeScore(edgeCases[5])).toBe(12);
     expect(strangeScore(edgeCases[6])).toBe(6);
+  });
+});
+
+describe('Verify if the brackets are correct', () => {
+  const testCases = [
+    ['(()())', true],
+    ['(()()', false],
+    ['(()()))', false],
+    ['(()()))(', false],
+    ['(()()))(()', false],
+    ['(()()))(()())', false],
+    ['(()()))(()()', false],
+    ['(()()))(()()))', false],
+    ['(()()))(()()))(', false],
+    ['()', true],
+    ['()()', true],
+    ['{[()]}', true],
+    ['{[(])}', false],
+    ['{[()]', false],
+    ['{[()]}{[()]}', true],
+  ];
+
+  test('Should return correct answers', () => {
+    expect(comprobateBrackets(testCases[0][0])).toBe(testCases[0][1]);
+    expect(comprobateBrackets(testCases[1][0])).toBe(testCases[1][1]);
+    expect(comprobateBrackets(testCases[2][0])).toBe(testCases[2][1]);
+    expect(comprobateBrackets(testCases[3][0])).toBe(testCases[3][1]);
+    expect(comprobateBrackets(testCases[4][0])).toBe(testCases[4][1]);
+    expect(comprobateBrackets(testCases[5][0])).toBe(testCases[5][1]);
+    expect(comprobateBrackets(testCases[6][0])).toBe(testCases[6][1]);
+    expect(comprobateBrackets(testCases[7][0])).toBe(testCases[7][1]);
+    expect(comprobateBrackets(testCases[8][0])).toBe(testCases[8][1]);
   });
 });

@@ -16,6 +16,30 @@ export const strangeScore = (ops) => {
   return result.reduce((acc, curr) => acc + curr);
 };
 
-export const comprobateBrackets = (str) => {}; //TODO
+export const comprobateBrackets = (str) => {
+  if (str.length % 2 !== 0) return false;
 
-console.log(comprobateBrackets('(()())')); // true
+  const array = str.split('');
+  let stack = [array[0]];
+  let isCorrect = true;
+
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] === '(' || array[i] === '[' || array[i] === '{') {
+      stack.push(array[i]);
+    } else if (
+      (stack[stack.length - 1] === '(' && array[i] === ')') ||
+      (stack[stack.length - 1] === '[' && array[i] === ']') ||
+      (stack[stack.length - 1] === '{' && array[i] === '}')
+    ) {
+      stack.pop();
+    } else if (stack.length === 0) {
+      if (i !== array.length - 1) {
+        isCorrect = false;
+      }
+    } else {
+      isCorrect = false;
+    }
+  }
+
+  return isCorrect;
+};
