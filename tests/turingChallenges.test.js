@@ -1,4 +1,9 @@
-import { strangeScore, comprobateBrackets } from '../code/turingChallenges.js';
+import {
+  strangeScore,
+  comprobateBrackets,
+  moveNPositionClockwise,
+  moveNPositionCounterClockwise,
+} from '../code/turingChallenges.js';
 
 xdescribe('Strange counter in basketball', () => {
   const testCases = [
@@ -36,7 +41,7 @@ xdescribe('Strange counter in basketball', () => {
   });
 });
 
-describe('Verify if the brackets are correct', () => {
+xdescribe('Verify if the brackets are correct', () => {
   const testCases = [
     ['(()())', true],
     ['(()()', false],
@@ -53,17 +58,66 @@ describe('Verify if the brackets are correct', () => {
     ['{[(])}', false],
     ['{[()]', false],
     ['{[()]}{[()]}', true],
+    ['{[()]}{[()]', false],
   ];
 
   test('Should return correct answers', () => {
-    expect(comprobateBrackets(testCases[0][0])).toBe(testCases[0][1]);
-    expect(comprobateBrackets(testCases[1][0])).toBe(testCases[1][1]);
-    expect(comprobateBrackets(testCases[2][0])).toBe(testCases[2][1]);
-    expect(comprobateBrackets(testCases[3][0])).toBe(testCases[3][1]);
-    expect(comprobateBrackets(testCases[4][0])).toBe(testCases[4][1]);
-    expect(comprobateBrackets(testCases[5][0])).toBe(testCases[5][1]);
-    expect(comprobateBrackets(testCases[6][0])).toBe(testCases[6][1]);
-    expect(comprobateBrackets(testCases[7][0])).toBe(testCases[7][1]);
-    expect(comprobateBrackets(testCases[8][0])).toBe(testCases[8][1]);
+    testCases.forEach((testCase) => {
+      expect(comprobateBrackets(testCase[0])).toBe(testCase[1]);
+    });
+  });
+});
+
+describe('Move N spaces in an array', () => {
+  const testCasesClockwise = [
+    [1, [1, 2, 3, 4, 5], [5, 1, 2, 3, 4]],
+    [2, [1, 2, 3, 4, 5], [4, 5, 1, 2, 3]],
+    [3, [1, 2, 3, 4, 5], [3, 4, 5, 1, 2]],
+    [4, [1, 2, 3, 4, 5], [2, 3, 4, 5, 1]],
+    [5, [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]],
+  ];
+
+  const testCasesCounterClockwise = [
+    [1, [1, 2, 3, 4, 5], [2, 3, 4, 5, 1]],
+    [2, [1, 2, 3, 4, 5], [3, 4, 5, 1, 2]],
+    [3, [1, 2, 3, 4, 5], [4, 5, 1, 2, 3]],
+    [4, [1, 2, 3, 4, 5], [5, 1, 2, 3, 4]],
+    [5, [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]],
+  ];
+
+  test('Should return correct answers. This should work with rotate clockwise', () => {
+    expect(moveNPositionClockwise(testCasesClockwise[0][0], testCasesClockwise[0][1])).toEqual(
+      testCasesClockwise[0][2]
+    );
+    expect(moveNPositionClockwise(testCasesClockwise[1][0], testCasesClockwise[1][1])).toEqual(
+      testCasesClockwise[1][2]
+    );
+    expect(moveNPositionClockwise(testCasesClockwise[2][0], testCasesClockwise[2][1])).toEqual(
+      testCasesClockwise[2][2]
+    );
+    expect(moveNPositionClockwise(testCasesClockwise[3][0], testCasesClockwise[3][1])).toEqual(
+      testCasesClockwise[3][2]
+    );
+    expect(moveNPositionClockwise(testCasesClockwise[4][0], testCasesClockwise[4][1])).toEqual(
+      testCasesClockwise[4][2]
+    );
+  });
+
+  test('Should return correct answers. This should work with rotate counter clockwise', () => {
+    expect(moveNPositionCounterClockwise(testCasesCounterClockwise[0][0], testCasesCounterClockwise[0][1])).toEqual(
+      testCasesCounterClockwise[0][2]
+    );
+    expect(moveNPositionCounterClockwise(testCasesCounterClockwise[1][0], testCasesCounterClockwise[1][1])).toEqual(
+      testCasesCounterClockwise[1][2]
+    );
+    expect(moveNPositionCounterClockwise(testCasesCounterClockwise[2][0], testCasesCounterClockwise[2][1])).toEqual(
+      testCasesCounterClockwise[2][2]
+    );
+    expect(moveNPositionCounterClockwise(testCasesCounterClockwise[3][0], testCasesCounterClockwise[3][1])).toEqual(
+      testCasesCounterClockwise[3][2]
+    );
+    expect(moveNPositionCounterClockwise(testCasesCounterClockwise[4][0], testCasesCounterClockwise[4][1])).toEqual(
+      testCasesCounterClockwise[4][2]
+    );
   });
 });
