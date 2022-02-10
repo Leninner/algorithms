@@ -23,3 +23,15 @@ const sumOfTwo = (arr, k) => {
 };
 
 export default sumOfTwo;
+
+const sumOfTwoRevisited = (array, target) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array.includes(target - array[i]) && array.indexOf(target - array[i]) !== i) {
+      return [i, array.indexOf(target - array[i])];
+    }
+  }
+
+  return 'No se encontró ningún par';
+};
+
+console.log(sumOfTwoRevisited([9, 6, 4, 2, 2, 2, 2, 2], 15));
