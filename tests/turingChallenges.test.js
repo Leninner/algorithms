@@ -58,13 +58,13 @@ describe('Verify if the brackets are correct', () => {
   ];
 
   test('Should return correct answers', () => {
-    testCases.forEach((testCase) => {
-      expect(comprobateBrackets(testCase[0])).toBe(testCase[1]);
+    testCases.forEach(([str, result]) => {
+      expect(comprobateBrackets(str)).toBe(result);
     });
   });
 });
 
-describe('Move N spaces in an array', () => {
+xdescribe('Move N spaces in an array', () => {
   const testCasesClockwise = [
     [1, [1, 2, 3, 4, 5], [5, 1, 2, 3, 4]],
     [2, [1, 2, 3, 4, 5], [4, 5, 1, 2, 3]],

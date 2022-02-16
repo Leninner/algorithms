@@ -21,28 +21,24 @@ export const comprobateBrackets = (str) => {
 
   const array = str.split('');
   let stack = [];
-  let isCorrect = true;
+
+  const bracketsPairs = {
+    '(': ')',
+    '[': ']',
+    '{': '}',
+  };
 
   for (let i = 0; i < array.length; i++) {
-    if (array[i] === '(' || array[i] === '[' || array[i] === '{') {
+    if (bracketsPairs[array[i]]) {
       stack.push(array[i]);
-    } else if (
-      (stack[stack.length - 1] === '(' && array[i] === ')') ||
-      (stack[stack.length - 1] === '[' && array[i] === ']') ||
-      (stack[stack.length - 1] === '{' && array[i] === '}')
-    ) {
+    } else if (bracketsPairs[stack[stack.length - 1]] === array[i]) {
       stack.pop();
-    } else if (stack.length === 0) {
-      if (i !== array.length - 1) {
-        isCorrect = false;
-      }
     } else {
-      isCorrect = false;
-      break;
+      return false;
     }
   }
 
-  return isCorrect;
+  return stack.length === 0;
 };
 
 export const moveNPositionClockwise = (k, nums) => {
@@ -77,11 +73,3 @@ const sumLeftLeavesInABinaryTree = (root) => {
 
   return sum;
 };
-
-console.log(
-  sumLeftLeavesInABinaryTree({
-    val: 1,
-    left: { val: 2, left: null, right: null },
-    right: { val: 3, left: null, right: null },
-  })
-);
