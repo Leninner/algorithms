@@ -4,19 +4,19 @@ const composeNumber = (number) => {
   let numberSize = newNumber.toString().length;
   let divisor = Math.pow(10, numberSize - 1);
 
-  result += ` ${parseInt(newNumber / divisor) * divisor}`;
+  result += ` ${parseInt(newNumber / divisor) * divisor} `;
 
   while (divisor >= 10) {
     newNumber = newNumber % divisor;
-    numberSize--;
+    numberSize = newNumber.toString().length;
     divisor = Math.pow(10, numberSize - 1);
-    result += parseInt(newNumber / divisor) * divisor;
+    result += parseInt(newNumber / divisor) * divisor + ` `;
   }
 
-  return result;
+  return [result, number];
 };
 
-console.log(composeNumber(12345));
+// console.log(composeNumber(12345));
 console.log(composeNumber(4500045));
 
 const composeNumber2 = (number) => {
