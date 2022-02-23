@@ -2,13 +2,6 @@
 // k = mínima de estudiantes
 // a = array con tiempo de entrada de cada estudiante
 
-const angryProfessor = (k, a) => {
-  // Write your code here
-  if (a.filter((item) => item <= 0).length < k) {
-    return 'YES';
-  } else {
-    return 'NO';
-  }
-};
+const angryProfessor = (k, a) => (a.filter((e) => e <= 0).length >= k ? 'NO' : 'YES');
 
 export { angryProfessor };
