@@ -6,3 +6,9 @@ const diffArray = (arr1, arr2) => {
 };
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+const diffArray2 = (arr1, arr2) => {
+  return arr1.filter((value) => !arr2.includes(value));
+};
+
+console.log(diffArray2([1, 5, 4, 8], []));
