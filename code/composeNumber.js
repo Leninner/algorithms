@@ -13,11 +13,8 @@ const composeNumber = (number) => {
     result += parseInt(newNumber / divisor) * divisor + ` `;
   }
 
-  return [result, number];
+  return result;
 };
-
-// console.log(composeNumber(12345));
-console.log(composeNumber(4500045));
 
 const composeNumber2 = (number) => {
   let result = '';
@@ -40,6 +37,6 @@ const composeNumber2 = (number) => {
   return result;
 };
 
-console.log(composeNumber2(12345));
-console.log(composeNumber2(1234567));
-console.log(composeNumber2(4500045));
+console.time('Solution O(n^2)');
+console.log(composeNumber2(450004578945));
+console.timeEnd('Solution O(n^2)');
