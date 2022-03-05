@@ -145,3 +145,96 @@ function rot13(str: string) {
 // console.log(rot13('SERR PBQR PNZC.'));
 
 // NOTE: Telephone Number Validator
+
+function telephoneCheck(str: string) {
+  const regExp = /^(1\s?)?(\d{3}|\(\d{3}\))[\-\s]?\d{3}[\-\s]?\d{4}$/;
+  // .test() retorna true or false
+  return regExp.test(str);
+}
+
+// telephoneCheck('1 555)-55-5555');
+
+// NOTE: Cash Register
+
+function checkCashRegister(price: number, cash: number, cid: any[]) {
+  let change = cash - price;
+  let aux = change;
+
+  const validate = cid.reduce((acc, [key, value]) => acc + value, 0);
+
+  if (validate < aux) {
+    return { status: 'INSUFFICIENT_FUNDS', change: [] };
+  }
+
+  if (validate === aux) {
+    return { status: 'CLOSED', change: [...cid] };
+  }
+
+  const currencyUnit: any = {
+    'ONE HUNDRED': 100,
+    TWENTY: 20,
+    TEN: 10,
+    FIVE: 5,
+    ONE: 1,
+    QUARTER: 0.25,
+    DIME: 0.1,
+    NICKEL: 0.05,
+    PENNY: 0.01,
+  };
+
+  let result = [];
+
+  while (change > 1) {
+    for (let i = cid.length - 1; i >= 0; i--) {
+      if (currencyUnit[cid[i][0]] <= change && cid[i][1] > 0) {
+        change = parseFloat((change - currencyUnit[cid[i][0]]).toFixed(2));
+        cid[i][1] -= currencyUnit[cid[i][0]];
+        result.push([cid[i][0], currencyUnit[cid[i][0]]]);
+        break;
+      }
+    }
+  }
+
+  let dollars: any = { QUARTER: 0.25, DIME: 0.1, NICKEL: 0.05, PENNY: 0.01 };
+
+  if (cid[3][1] + cid[2][1] + cid[1][1] + cid[0][1] < aux && result.length == 0) {
+    return { status: 'INSUFFICIENT_FUNDS', change: [] };
+  } else {
+    while (change) {
+      for (let i = 3; i >= 0; i--) {
+        if (dollars[cid[i][0]] <= change && cid[i][1]) {
+          change = parseFloat((change - dollars[cid[i][0]]).toFixed(2));
+          cid[i][1] -= dollars[cid[i][0]];
+          result.push([cid[i][0], dollars[cid[i][0]]]);
+          break;
+        }
+      }
+    }
+  }
+
+  return {
+    status: 'OPEN',
+    change: Object.entries(
+      result.reduce((acc: any, [key, value]) => {
+        if (acc[key]) {
+          acc[key] += value;
+        } else {
+          acc[key] = value;
+        }
+        return acc;
+      }, {})
+    ),
+  };
+}
+
+checkCashRegister(19.5, 20, [
+  ['PENNY', 1.01],
+  ['NICKEL', 2.05],
+  ['DIME', 3.1],
+  ['QUARTER', 4.25],
+  ['ONE', 90],
+  ['FIVE', 55],
+  ['TEN', 20],
+  ['TWENTY', 60],
+  ['ONE HUNDRED', 100],
+]);
