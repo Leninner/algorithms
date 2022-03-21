@@ -5,34 +5,26 @@
  * @link https://www.hackerrank.com/challenges/reduced-string/problem?isFullScreen=true
  */
 
-const superReducedString = (s: string): any => {
-  // Write your code here
+// Usando un stack LIFO (Last in First Out)
 
-  let objResult: { [key: string]: number } = {};
+function superReducedString(s: string): string {
+  if (s === '') return 'Empty String';
+  let results: string[] = [];
 
-  s.split('').forEach((letter) => {
-    objResult[letter] = (objResult[letter] || 0) + 1;
-  });
-
-  console.log(objResult);
-
-  return Object.entries(objResult).reduce((acc: string, [key, value]): string => {
-    if (value > 1) {
-      value -= 2;
-
-      if (value > 0) {
-        acc += key;
-      }
-    } else {
-      acc += key;
+  for (let i = 0; i < s.length; i++) {
+    if (results[results.length - 1] === s[i]) {
+      results.splice(results.length - 1, 1);
+      continue;
     }
 
-    return acc.length === 0 ? 'Empty String' : acc;
-  }, '');
-};
+    results.push(s[i]);
+  }
+
+  return results.join('') || 'Empty String';
+}
 
 console.log(
   superReducedString(
     'zztqooauhujtmxnsbzpykwlvpfyqijvdhuhiroodmuxiobyvwwxupqwydkpeebxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh'
   )
-); //tqauhujtmxnsbzpykwlvpfyqijvdhuhirdmuxiobyvxupqwydkpbxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh
+); // tqauhujtmxnsbzpykwlvpfyqijvdhuhirdmuxiobyvxupqwydkpbxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh
