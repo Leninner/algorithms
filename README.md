@@ -55,6 +55,7 @@ $ npm run test
 
 ## Contact
 
-- Website [your-website.com](https://leninner.vercel.app/)
+- Website [leninner.vercel.app](https://leninner.vercel.app/)
 - GitHub [@leninner](https://github.com/leninner)
 - Twitter [@\_leninner](https://twitter.com/_leninner)
+- LinkedIn [Lenin Mazabanda](https://www.linkedin.com/in/leninner/)
