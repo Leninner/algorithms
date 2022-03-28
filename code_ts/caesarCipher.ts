@@ -9,21 +9,21 @@
 function caesarCipher(s: string, k: number): string {
   const arrayMessage = s.split('').map((value) => value.charCodeAt(0));
 
-  for (let i = 0; i < arrayMessage.length; i++) {
-    if (arrayMessage[i] >= 65 && arrayMessage[i] <= 90) {
-      let newValue = arrayMessage[i] + (k % 26);
-      newValue = newValue > 90 ? 64 + (newValue - 90) : newValue;
-      arrayMessage[i] = newValue;
-    }
+  return arrayMessage
+    .map((value) => {
+      if (value >= 65 && value <= 90) {
+        let newValue = value + (k % 26);
+        return String.fromCharCode(newValue > 90 ? 64 + (newValue - 90) : newValue);
+      }
 
-    if (arrayMessage[i] >= 97 && arrayMessage[i] <= 122) {
-      let newValue = arrayMessage[i] + (k % 26);
-      newValue = newValue > 122 ? 96 + (newValue - 122) : newValue;
-      arrayMessage[i] = newValue;
-    }
-  }
+      if (value >= 97 && value <= 122) {
+        let newValue = value + (k % 26);
+        return String.fromCharCode(newValue > 122 ? 96 + (newValue - 122) : newValue);
+      }
 
-  return arrayMessage.map((value) => String.fromCharCode(value)).join('');
+      return String.fromCharCode(value);
+    })
+    .join('');
 }
 
 console.log(caesarCipher('middle-Outz', 2));
