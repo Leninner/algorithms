@@ -21,15 +21,9 @@ const maxSubstring = (s: string): string => {
 
   results.push(temporalString);
 
-  let max = 0;
-
-  results.forEach((value) => {
-    if (value.length > max) {
-      max = value.length;
-    }
-  });
-
-  return results.find((value) => value.length === max)?.toString() || '';
+  return results.reduce((acc, curr) => {
+    return (acc = curr.length > acc.length ? curr : acc);
+  }, '');
 };
 
 console.log(maxSubstring('aaabccc'));
