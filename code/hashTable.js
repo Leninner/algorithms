@@ -113,4 +113,4 @@ console.log(
     ['insert', 'addToValue', 'get', 'insert', 'addToKey', 'addToValue', 'get'],
     [[1, 2], [2], [1], [2, 3], [1], [-1], [3]]
   )
-);
+); // 6
