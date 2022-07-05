@@ -5,34 +5,54 @@
  * @link https://leetcode.com/problems/lemonade-change/
  */
 
-function lemonadeChange(bills: number[]): any {
-  let acc: number[] = [];
+function lemonadeChange(bills: number[]): boolean {
+  if (bills[0] > 5) return false;
+
+  let payments = [];
 
   for (let i = 0; i < bills.length; i++) {
-    if (bills[i] > 5) {
-      for (let k = 0; k < acc.length; k++) {
-        for (let j = k; j < acc.length; j++) {
-          if (acc[k] + acc[j] === bills[i] - 5) {
-            return true;
-          }
+    payments.push(bills[i]);
 
-          acc.unshift();
-        }
+    if (bills[i] === 10) {
+      if (payments.indexOf(5) > -1) {
+        payments.splice(payments.indexOf(5), 1);
+      } else {
+        return false;
       }
     }
 
-    acc.push(bills[i]);
+    if (bills[i] === 20) {
+      if (payments.indexOf(10) > -1) {
+        payments.splice(payments.indexOf(10), 1);
+
+        if (payments.indexOf(5) > -1) {
+          payments.splice(payments.indexOf(5), 1);
+        } else {
+          return false;
+        }
+      } else if (payments.indexOf(5) === payments.lastIndexOf(5)) {
+        return false;
+      } else {
+        if (payments.reduce((a, b) => (b === 5 ? a + b : a), 0) < 15) {
+          return false;
+        } else {
+          payments.splice(payments.indexOf(5), 1);
+          payments.splice(payments.indexOf(5), 1);
+          payments.splice(payments.indexOf(5), 1);
+        }
+      }
+    }
   }
 
-  return false;
+  return true;
 }
 
 console.log(lemonadeChange([5, 5, 5, 10, 20])); // true
 console.log(lemonadeChange([5, 5, 10, 10, 20])); // false
-console.log(lemonadeChange([5, 5, 5, 20, 20, 20, 20, 20, 20, 20])); // true
+console.log(lemonadeChange([5, 5, 5, 20, 20, 20, 20, 20, 20, 20])); // false
 console.log(lemonadeChange([5, 10, 5, 10, 5, 10, 5])); // true
 console.log(lemonadeChange([20, 20, 20, 20])); // false
-console.log(lemonadeChange([5, 5, 5, 5, 20, 20, 5, 5, 20, 5])); // true
+console.log(lemonadeChange([5, 5, 5, 5, 20, 20, 5, 5, 20, 5])); // false
 console.log(
   lemonadeChange([
     5, 10, 5, 20, 5, 10, 5, 20, 5, 10, 5, 20, 5, 10, 5, 20, 5, 10, 5, 20, 5, 10, 5, 20, 5, 10, 5,
@@ -52,3 +72,4 @@ console.log(
     5, 20, 5, 10, 5, 20, 5, 10, 5, 20, 5, 10, 5, 20, 5, 10, 5, 20, 5, 10, 5, 20,
   ])
 ); // true
+console.log(lemonadeChange([5, 5, 20, 5, 5, 10, 5, 10, 5, 20])); // false
