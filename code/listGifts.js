@@ -12,13 +12,7 @@ function listGifts(letter) {
     .split(' ')
     .filter((word) => Boolean(word) && !word.includes('_'))
     .reduce((acc, curr) => {
-      if (acc[curr]) {
-        acc[curr]++;
-      } else {
-        acc[curr] = 1;
-      }
-
-      return acc;
+      return acc[curr] ? acc[curr]++ : (acc[curr] = 1), acc;
     }, {});
 }
 
