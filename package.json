@@ -26,5 +26,23 @@
   },
   "dependencies": {
     "ts-node": "^10.7.0"
-  }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid",
+    "overrides": [
+      {
+        "files": "*.js",
+        "options": {
+          "parser": "babel-eslint"
+        }
+      }
+    ]
+  } 
 }
