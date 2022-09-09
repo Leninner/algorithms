@@ -1,2 +1,0 @@
-//Presets para Jest
-{ "presets": ["@babel/preset-env"] }

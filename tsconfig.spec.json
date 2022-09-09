@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "parserOptions": {
+      "project": "tsconfig.spec.json"
+    }
   }
 }
