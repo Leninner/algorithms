@@ -2,11 +2,11 @@ import {createXmasTree} from "../../code_ts/adventJs/04"
 
 describe("Draw a tree", () => {
   describe("The function", ()=>{
-    it("should be called with a number as argument", ()=>{
+    it("should be called with a number as argument", () => {
       expect(createXmasTree(5)).toStrictEqual(expect.any(String))
     })
 
-    it("the number should be between 1 and 100", ()=>{
+    it("the number should be between 1 and 100", () => {
       expect(() => createXmasTree(0)).toThrow()
       expect(() => createXmasTree(101)).toThrow()
     })

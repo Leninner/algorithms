@@ -1,9 +1,9 @@
-import { appendAndDelete } from '../code/appendAndDelete';
+import { appendAndDelete } from '../code/appendAndDelete'
 
-xdescribe('appendAndDelete', () => {
+describe.skip('appendAndDelete', () => {
   test('Debe dar resultados correctos', () => {
-    expect(appendAndDelete('hackerhappy', 'hackerrank', 9)).toBe('Yes');
-    expect(appendAndDelete('aba', 'aba', 7)).toBe('Yes');
-    expect(appendAndDelete('ashley', 'ash', 2)).toBe('No');
-  });
-});
+    expect(appendAndDelete('hackerhappy', 'hackerrank', 9)).toBe('Yes')
+    expect(appendAndDelete('aba', 'aba', 7)).toBe('Yes')
+    expect(appendAndDelete('ashley', 'ash', 2)).toBe('No')
+  })
+})
