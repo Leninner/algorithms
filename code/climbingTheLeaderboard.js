@@ -8,19 +8,19 @@
  */
 
 function climbingLeaderboard(ranked, player) {
-  let rankedRefactorized = Array.from(new Set(ranked));
-  let results = [];
+  const rankedRefactorized = Array.from(new Set(ranked))
+  const results = []
 
   for (let i = 0; i < player.length; i++) {
-    rankedRefactorized.push(player[i]);
-    rankedRefactorized.sort((a, b) => b - a);
-    results.push(rankedRefactorized.indexOf(player[i]) + 1);
+    rankedRefactorized.push(player[i])
+    rankedRefactorized.sort((a, b) => b - a)
+    results.push(rankedRefactorized.indexOf(player[i]) + 1)
   }
 
-  return results;
+  return results
 }
 
-export { climbingLeaderboard };
+export { climbingLeaderboard }
 
 // NOTE: Solución de 12 puntos para el mismo ejercicio. Tiene problemas con el tiempo
 

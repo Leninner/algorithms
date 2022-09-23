@@ -7,12 +7,10 @@
 
 const isWithinUpperCaseLetters = (char) => {
   if (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90) {
-    return true;
+    return true
   }
-};
+}
 
-const camelcase = (s) => {
-  return s.split('').filter(isWithinUpperCaseLetters).length + 1;
-};
+const camelcase = (s) => s.split('').filter(isWithinUpperCaseLetters).length + 1
 
-export default camelcase;
+export default camelcase

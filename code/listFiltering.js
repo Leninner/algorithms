@@ -1,1 +1,2 @@
-const listFiltering = (list) => list.filter((value) => typeof value === 'number');
+const listFiltering = (list) =>
+  list.filter((value) => typeof value === 'number')

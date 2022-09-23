@@ -1,15 +1,14 @@
-const uniqueInOrder = (iterable) => {
-  return typeof iterable === 'object'
+const uniqueInOrder = (iterable) =>
+  typeof iterable === 'object'
     ? iterable.reduce((acc, curr) => {
-        if (curr !== acc[acc.length - 1]) acc.push(curr);
+        if (curr !== acc[acc.length - 1]) acc.push(curr)
 
-        return acc;
+        return acc
       }, [])
     : iterable.split('').reduce((acc, curr) => {
-        if (curr !== acc[acc.length - 1]) acc.push(curr);
+        if (curr !== acc[acc.length - 1]) acc.push(curr)
 
-        return acc;
-      }, []);
-};
+        return acc
+      }, [])
 
-console.log(uniqueInOrder('AAAAAABBBBAAAAaBBBC'));
+console.log(uniqueInOrder('AAAAAABBBBAAAAaBBBC'))

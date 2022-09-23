@@ -10,12 +10,16 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['standard-with-typescript', '@tinkin'],
+  extends: ['@tinkin'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
   rules: {
     endOfLine: OPTIONS.OFF,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    'no-magic-numbers': OPTIONS.OFF,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    'no-extra-parens': OPTIONS.OFF,
   },
 }

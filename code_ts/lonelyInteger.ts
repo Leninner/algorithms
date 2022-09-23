@@ -4,6 +4,7 @@
  * @returns {number} the number that occurs only one time
  */
 
-const lonelyinteger = (a: number[]): number => a.find((value) => a.indexOf(value) === a.lastIndexOf(value)) || -1;
+const lonelyinteger = (a: number[]): number =>
+  a.find((value) => a.indexOf(value) === a.lastIndexOf(value)) || -1
 
-console.log(lonelyinteger([1, 1, 4, 5, 4]));
+console.log(lonelyinteger([1, 1, 4, 5, 4]))

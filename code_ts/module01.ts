@@ -1,5 +1,3 @@
-function addNumbers(x:number, y:number) {
-  return x + y;
-}
+const addNumbers = (x: number, y: number): number => x + y
 
-console.log(addNumbers(3, 6));
+console.log(addNumbers(3, 6))

@@ -3,8 +3,7 @@
  * s => query
  */
 
-const filterResults = (s, array) => {
-  return array.filter((value) => value.slice(0, s.length) === s);
-};
+const filterResults = (s, array) =>
+  array.filter((value) => value.slice(0, s.length) === s)
 
-console.log(filterResults('de', ['dog', 'deer', 'deal']));
+console.log(filterResults('de', ['dog', 'deer', 'deal']))

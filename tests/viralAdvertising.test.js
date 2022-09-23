@@ -1,5 +1,5 @@
-import { strangeAdvertising } from '../code/viralAdvertising';
+import { strangeAdvertising } from '../code/viralAdvertising'
 
-xtest('Debería devolver un resultado correcto', () => {
-  expect(strangeAdvertising(5)).toBe(24);
-});
+test.skip('Debería devolver un resultado correcto', () => {
+  expect(strangeAdvertising(5)).toBe(24)
+})

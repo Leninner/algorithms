@@ -1,20 +1,20 @@
 const truthCheck = (collection, pre) => {
-  let isPre = true;
+  let isPre = true
 
   for (let i = 0; i < collection.length; i++) {
     if (!(pre in collection[i])) {
-      isPre = false;
-      break;
+      isPre = false
+      break
     }
 
     if (!collection[i][pre] && pre in collection[i]) {
-      isPre = false;
-      break;
+      isPre = false
+      break
     }
   }
 
-  return isPre;
-};
+  return isPre
+}
 
 console.log(
   truthCheck(
@@ -26,7 +26,7 @@ console.log(
     ],
     'sex'
   )
-); // true
+) // true
 
 console.log(
   truthCheck(
@@ -38,7 +38,7 @@ console.log(
     ],
     'sex'
   )
-); // false
+) // false
 
 console.log(
   truthCheck(
@@ -50,4 +50,4 @@ console.log(
     ],
     'age'
   )
-); // false
+) // false

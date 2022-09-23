@@ -23,7 +23,6 @@ The hashmap looks like this after each query:
 The result of the last get query for 3 is 5 in the resulting hashmap.
 
 
-
 For queryType = ["insert", "addToValue", "get", "insert", "addToKey", "addToValue", "get"] and query = [[1, 2], [2], [1], [2, 3], [1], [-1], [3]], the output should be solution(queryType, query) = 6.
 
 The hashmap looks like this after each query:
@@ -71,38 +70,38 @@ function helloWorld(name) {
  */
 
 function solution(queryType, query) {
-  let hashmap = {};
-  let result = 0;
+  let hashmap = {}
+  let result = 0
 
   for (let i = 0; i < queryType.length; i++) {
     switch (queryType[i]) {
       case 'insert':
-        hashmap[query[i][0]] = Number(query[i][1]);
-        break;
+        hashmap[query[i][0]] = Number(query[i][1])
+        break
 
       case 'addToValue':
-        for (let key in hashmap) {
-          hashmap[key] += Number(query[i][0]);
+        for (const key in hashmap) {
+          hashmap[key] += Number(query[i][0])
         }
-        break;
+        break
 
       case 'addToKey':
-        let temp = Object.entries(hashmap);
+        const temp = Object.entries(hashmap)
         hashmap = temp.reduce((acc, [key, value]) => {
-          acc[+key + Number(query[i][0])] = value;
+          acc[+key + Number(query[i][0])] = value
 
-          return acc;
-        }, {});
+          return acc
+        }, {})
 
-        break;
+        break
 
       case 'get':
-        result += Number(hashmap[query[i][0]]);
-        break;
+        result += Number(hashmap[query[i][0]])
+        break
     }
   }
 
-  return result;
+  return result
 }
 
 // ["insert", "addToValue", "get", "insert", "addToKey", "addToValue", "get"]
@@ -113,4 +112,4 @@ console.log(
     ['insert', 'addToValue', 'get', 'insert', 'addToKey', 'addToValue', 'get'],
     [[1, 2], [2], [1], [2, 3], [1], [-1], [3]]
   )
-); // 6
+) // 6

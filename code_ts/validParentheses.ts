@@ -1,7 +1,7 @@
-function isValid(brackets: string): boolean {
-  let stack: string[] = []
+const isValid = (brackets: string): boolean => {
+  const stack: string[] = []
 
-  for (let bracket of brackets) {
+  for (const bracket of brackets) {
     if (stack.length && isClosing(stack[stack.length - 1], bracket)) stack.pop()
     else stack.push(bracket)
   }
@@ -9,12 +9,13 @@ function isValid(brackets: string): boolean {
   return !stack.length
 }
 
-function isClosing(open: String, close: String) {
-  return (open === '(' && close === ')') || (open === '{' && close === '}') || (open === '[' && close === ']')
-}
+const isClosing = (open: string, close: string) =>
+  (open === '(' && close === ')') ||
+  (open === '{' && close === '}') ||
+  (open === '[' && close === ']')
 
 console.log(isValid('(')) // false
 console.log(isValid('())')) // false
 console.log(isValid('((({{{}}})))')) // true
 console.log(isValid('((({}})))()()')) // false
-console.log(isValid('())({}}{()][][')) //false
+console.log(isValid('())({}}{()][][')) // false

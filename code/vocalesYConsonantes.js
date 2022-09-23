@@ -5,16 +5,16 @@
  */
 
 const vowelsAndConsonants = (s) => {
-  const vowels = 'aeiouáéíóú';
-  let consonants = '';
+  const vowels = 'aeiouáéíóú'
+  let consonants = ''
 
   for (let i = 0; i < s.length; i++) {
     if (!vowels.includes(s[i])) {
-      consonants += s[i];
+      consonants += s[i]
     }
   }
 
-  return consonants;
-};
+  return consonants
+}
 
-export { vowelsAndConsonants };
+export { vowelsAndConsonants }

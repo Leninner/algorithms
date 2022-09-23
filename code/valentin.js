@@ -7,18 +7,18 @@ const array = [
   'Amor me haces feliii',
   'Amor me dá alegria poder verte',
   'Hola, tu eres muy guapa, y yo también, ¿qué tal si nos besamos?',
-];
+]
 
 const printPhrase = () => {
   for (let i = 0; i < array.length; i++) {
-    console.log(array[i]);
+    console.log(array[i])
   }
-};
+}
 
-printPhrase();
+printPhrase()
 
-const a = 19;
-const b = 10;
+const a = 19
+const b = 10
 
 // < > <= >= == !=
 // Math.min(10, 0) 0

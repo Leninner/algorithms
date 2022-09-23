@@ -6,22 +6,22 @@
  */
 
 function bubbleSort(array) {
-  let swapped = true;
-  let j = 0;
+  let swapped = true
+  let j = 0
 
   while (swapped) {
-    swapped = false;
-    j++;
+    swapped = false
+    j++
 
     for (let i = 0; i < array.length - j; i++) {
       if (array[i] > array[i + 1]) {
-        let tmp = array[i];
-        array[i] = array[i + 1];
-        array[i + 1] = tmp;
-        swapped = true;
+        const tmp = array[i]
+        array[i] = array[i + 1]
+        array[i + 1] = tmp
+        swapped = true
       }
     }
   }
 
-  return array;
+  return array
 }

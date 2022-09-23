@@ -3,13 +3,13 @@
 // cc = string para ponerle una máscara
 
 function maskify(cc) {
-    let string = "";
-    for (let i = 0; i < cc.length - 4; i++) {
-        string += "#";
-    }
-    return string + cc.slice(-4); // Slice sirve para retornar una subcadena de texto. El primer argumento es el inicio y si no se declara un final, entonces toma toda la subcadena a partir del número de inicio indicado
+  let string = ''
+  for (let i = 0; i < cc.length - 4; i++) {
+    string += '#'
+  }
+  return string + cc.slice(-4) // Slice sirve para retornar una subcadena de texto. El primer argumento es el inicio y si no se declara un final, entonces toma toda la subcadena a partir del número de inicio indicado
 }
 
-console.log(maskify("4556364607935616")); // '############5616'
-console.log(maskify("1")); // 1
-console.log(maskify("11111")); // #1111
+console.log(maskify('4556364607935616')) // '############5616'
+console.log(maskify('1')) // 1
+console.log(maskify('11111')) // #1111

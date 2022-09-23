@@ -9,7 +9,7 @@ XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 XO("zzoo") => false
  */
 
-const xo = (str: string): boolean => {
+const xo = (str: string): boolean =>
   // let contX = 0
   // let contY = 0
 
@@ -20,8 +20,7 @@ const xo = (str: string): boolean => {
 
   // return contX === contY
 
-  return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length
-}
+  str.toLowerCase().split('x').length === str.toLowerCase().split('o').length
 
 console.log(xo('XOOxxoo'))
 console.log(xo('xooxx'))

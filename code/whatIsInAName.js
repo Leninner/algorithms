@@ -4,11 +4,11 @@ const whatIsInAName = (collection, source) => {
   Object.entries(source).map(([key, value]) => {
     for (let i = 0; i < collection.length; i++) {
       if (key in collection[i] && value == collection[i][key]) {
-        console.log('Lenin', collection[i][key], key);
+        console.log('Lenin', collection[i][key], key)
       }
     }
-  });
-};
+  })
+}
 
 // whatIsInAName(
 //   [
@@ -19,4 +19,7 @@ const whatIsInAName = (collection, source) => {
 //   { last: 'Capulet' }
 // );
 
-whatIsInAName([{ apple: 1, bat: 2 }, { bat: 2 }, { apple: 1, bat: 2, cookie: 2 }], { apple: 1, bat: 2 });
+whatIsInAName(
+  [{ apple: 1, bat: 2 }, { bat: 2 }, { apple: 1, bat: 2, cookie: 2 }],
+  { apple: 1, bat: 2 }
+)

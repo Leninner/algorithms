@@ -1,14 +1,14 @@
 {
-  "name": "solutionexercises",
+  "name": "algorithms-js-ts",
   "version": "1.0.0",
   "description": "Solución a algunos ejercicios de Hackerrank, Leetcode, Codewars y otras plataformas de codificación.",
-  "main": "angryProfessor.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
     "preupdate": "git commit -a  -m '[UPDATE] files'",
     "update": "git push",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -28,14 +28,11 @@
     "@types/jest": "^28.1.4",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "eslint": "^8.23.0",
-    "eslint-config-standard-with-typescript": "^22.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-promise": "^6.0.1",
+    "husky": "^8.0.1",
     "jest": "^27.2.5",
     "typescript": "^4.8.3"
-  },
-  "dependencies": {
-    "ts-node": "^10.7.0"
   }
 }

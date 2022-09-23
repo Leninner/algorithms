@@ -19,34 +19,34 @@
 // _ _ _ _ _ _ _ _       DONE            DONE
 
 const cutTheSticks = (arr) => {
-  let stickCutArray = [];
-  let stickCutCount = 0;
-  let newArray = [...arr];
-  let currentLower = Math.min(...newArray);
+  const stickCutArray = []
+  let stickCutCount = 0
+  const newArray = [...arr]
+  let currentLower = Math.min(...newArray)
 
   for (let i = 0; i < newArray.length; ++i) {
-    stickCutCount++;
+    stickCutCount++
 
-    console.log({ newArray, currentLower });
+    console.log({ newArray, currentLower })
 
     if (currentLower === newArray[i]) {
-      newArray.splice(i, 1);
-      i--;
+      newArray.splice(i, 1)
+      i--
     } else {
-      newArray[i] -= currentLower;
+      newArray[i] -= currentLower
     }
 
     if (i === newArray.length - 1) {
-      currentLower = Math.min(...newArray);
-      i = -1;
-      stickCutArray.push(stickCutCount);
-      stickCutCount = 0;
+      currentLower = Math.min(...newArray)
+      i = -1
+      stickCutArray.push(stickCutCount)
+      stickCutCount = 0
     }
   }
 
-  return stickCutArray;
-};
+  return stickCutArray
+}
 
-console.log(cutTheSticks([5, 4, 4, 2, 2, 8]));
-console.log(cutTheSticks([1, 2, 3, 4, 3, 3, 2, 1]));
-console.log(cutTheSticks([1, 2, 3]));
+console.log(cutTheSticks([5, 4, 4, 2, 2, 8]))
+console.log(cutTheSticks([1, 2, 3, 4, 3, 3, 2, 1]))
+console.log(cutTheSticks([1, 2, 3]))

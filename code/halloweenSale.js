@@ -10,13 +10,13 @@ function howManyGames(p, d, m, s) {
 
   // NOTE: Solución correcta
 
-  let games = 0;
+  let games = 0
   while (s >= 0) {
-    s -= p;
-    p = Math.max(p - d, m); // El método Math.max devuelve el mayor entre 2 números
-    games += 1;
+    s -= p
+    p = Math.max(p - d, m) // El método Math.max devuelve el mayor entre 2 números
+    games += 1
   }
-  console.log(games - 1);
+  console.log(games - 1)
 
   // NOTE: Solución deficiente
 
@@ -41,7 +41,7 @@ function howManyGames(p, d, m, s) {
   // }
 }
 
-howManyGames(20, 3, 6, 70); // 5 games
-howManyGames(20, 3, 6, 80); // 6 games
-howManyGames(20, 3, 6, 85); // 7 games
-howManyGames(13, 74, 1, 237); // 225 games
+howManyGames(20, 3, 6, 70) // 5 games
+howManyGames(20, 3, 6, 80) // 6 games
+howManyGames(20, 3, 6, 85) // 7 games
+howManyGames(13, 74, 1, 237) // 225 games

@@ -10,10 +10,14 @@
 
 const reverse = (number) => {
   if (number < 0) {
-    return number > 2 ** 23 ? 0 : parseInt(`-${number.toString().split('').reverse().join('')}`);
+    return number > 2 ** 23
+      ? 0
+      : parseInt(`-${number.toString().split('').reverse().join('')}`)
   } else {
-    return number > 2 ** 23 ? 0 : parseInt(number.toString().split('').reverse().join(''));
+    return number > 2 ** 23
+      ? 0
+      : parseInt(number.toString().split('').reverse().join(''))
   }
-};
+}
 
-export { reverse };
+export { reverse }

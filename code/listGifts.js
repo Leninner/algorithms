@@ -5,15 +5,13 @@
  * @returns {object}
  */
 
-const carta = 'bici coche  balón _playstation bici coche peluche';
+const carta = 'bici coche  balón _playstation bici coche peluche'
 
 function listGifts(letter) {
   return letter
     .split(' ')
     .filter((word) => Boolean(word) && !word.includes('_'))
-    .reduce((acc, curr) => {
-      return acc[curr] ? acc[curr]++ : (acc[curr] = 1), acc;
-    }, {});
+    .reduce((acc, curr) => (acc[curr] ? acc[curr]++ : acc[curr] = 1, acc), {})
 }
 
-console.log(listGifts(carta));
+console.log(listGifts(carta))

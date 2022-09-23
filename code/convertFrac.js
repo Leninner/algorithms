@@ -10,23 +10,23 @@
 // Output: (6,12)(4,12)(3,12)
 
 const mcd = (x, y) => {
-  x = Math.abs(x);
-  y = Math.abs(y);
-  let z;
+  x = Math.abs(x)
+  y = Math.abs(y)
+  let z
 
   while (y) {
-    z = y;
-    y = x % y;
-    x = z;
+    z = y
+    y = x % y
+    x = z
   }
 
-  return x;
-};
-
-const convertFrac = (lst) => {};
-
-function mcm(a, b) {
-  return !a || !b ? 0 : Math.abs((a * b) / mcd(a, b));
+  return x
 }
 
-console.log(mcm(6, 7));
+const convertFrac = (lst) => {}
+
+function mcm(a, b) {
+  return !a || !b ? 0 : Math.abs((a * b) / mcd(a, b))
+}
+
+console.log(mcm(6, 7))

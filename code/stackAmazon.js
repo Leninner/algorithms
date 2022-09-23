@@ -1,43 +1,43 @@
 class StackAmazon {
   constructor() {
-    this.arreglo = [];
+    this.arreglo = []
   }
 
   getArreglo() {
-    return this.arreglo;
+    return this.arreglo
   }
 
   push(value) {
-    this.arreglo.push(value);
+    this.arreglo.push(value)
   }
 
   pop() {
-    return this.arreglo.length ? this.arreglo.shift() : null;
+    return this.arreglo.length ? this.arreglo.shift() : null
   }
 
   max() {
     return this.arreglo.length
       ? this.arreglo.reduce((acc, curr) => {
           if (acc < curr) {
-            acc = curr;
+            acc = curr
           }
 
-          return acc;
+          return acc
         })
-      : null;
+      : null
   }
 }
 
-const stack = new StackAmazon();
+const stack = new StackAmazon()
 
-stack.push(1);
-stack.push(45);
-stack.push(2);
-stack.pop();
-console.log(stack.max());
-console.log(stack.getArreglo());
-stack.pop();
-stack.pop();
-console.log(stack.pop());
-console.log(stack.getArreglo());
-console.log(stack.max());
+stack.push(1)
+stack.push(45)
+stack.push(2)
+stack.pop()
+console.log(stack.max())
+console.log(stack.getArreglo())
+stack.pop()
+stack.pop()
+console.log(stack.pop())
+console.log(stack.getArreglo())
+console.log(stack.max())

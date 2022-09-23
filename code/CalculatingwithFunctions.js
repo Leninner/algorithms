@@ -11,23 +11,23 @@
 // The most outer function represents the left operand, the most inner function represents the right operand
 // Division should be integer division. For example, this should return 2, not 2.666666...:
 
-const zero = (fn) => (!fn ? () => 0 : fn(() => 0));
-const one = (fn) => (!fn ? () => 1 : fn(() => 1));
-const two = (fn) => (!fn ? () => 2 : fn(() => 2));
-const three = (fn) => (!fn ? () => 3 : fn(() => 3));
-const four = (fn) => (!fn ? () => 4 : fn(() => 4));
-const five = (fn) => (!fn ? () => 5 : fn(() => 5));
-const six = (fn) => (!fn ? () => 6 : fn(() => 6));
-const seven = (fn) => (!fn ? () => 7 : fn(() => 7));
-const eight = (fn) => (!fn ? () => 8 : fn(() => 8));
-const nine = (fn) => (!fn ? () => 9 : fn(() => 9));
+const zero = (fn) => (!fn ? () => 0 : fn(() => 0))
+const one = (fn) => (!fn ? () => 1 : fn(() => 1))
+const two = (fn) => (!fn ? () => 2 : fn(() => 2))
+const three = (fn) => (!fn ? () => 3 : fn(() => 3))
+const four = (fn) => (!fn ? () => 4 : fn(() => 4))
+const five = (fn) => (!fn ? () => 5 : fn(() => 5))
+const six = (fn) => (!fn ? () => 6 : fn(() => 6))
+const seven = (fn) => (!fn ? () => 7 : fn(() => 7))
+const eight = (fn) => (!fn ? () => 8 : fn(() => 8))
+const nine = (fn) => (!fn ? () => 9 : fn(() => 9))
 
-const plus = (a) => (b) => b() + a();
-const minus = (a) => (b) => b() - a();
-const times = (a) => (b) => b() * a();
-const dividedBy = (a) => (b) => Math.floor(b() / a());
+const plus = (a) => (b) => b() + a()
+const minus = (a) => (b) => b() - a()
+const times = (a) => (b) => b() * a()
+const dividedBy = (a) => (b) => Math.floor(b() / a())
 
-console.log(seven(times(five())));
-console.log(four(plus(nine())));
-console.log(eight(minus(three())));
-console.log(six(dividedBy(two())));
+console.log(seven(times(five())))
+console.log(four(plus(nine())))
+console.log(eight(minus(three())))
+console.log(six(dividedBy(two())))

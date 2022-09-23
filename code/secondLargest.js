@@ -4,17 +4,17 @@
  *   @return {Number} The second largest number in the array.
  **/
 function getSecondLargest(nums) {
-    // Complete the function
-    let objetos = {};
-    nums.forEach((value) => {
-        if (objetos[value]) {
-            objetos[value] += 1;
-        } else {
-            objetos[value] = 1;
-        }
-    });
-    let table = Object.keys(objetos);
-    return table[table.length - 2];
+  // Complete the function
+  const objetos = {}
+  nums.forEach((value) => {
+    if (objetos[value]) {
+      objetos[value] += 1
+    } else {
+      objetos[value] = 1
+    }
+  })
+  const table = Object.keys(objetos)
+  return table[table.length - 2]
 }
 
-getSecondLargest([4, 8, 7, 9, 4, 5]);
+getSecondLargest([4, 8, 7, 9, 4, 5])

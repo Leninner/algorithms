@@ -6,20 +6,20 @@
  */
 
 const equalizeArray = (arr: number[]): number => {
-  let obj: { [key: number]: number } = {};
+  const obj: { [key: number]: number } = {}
 
   // Solution hermosa
   arr.forEach((num: number) => {
-    obj[num] = (obj[num] || 0) + 1;
-  });
+    obj[num] = (obj[num] || 0) + 1
+  })
 
   const result = Object.entries(obj)
     .sort((a, b) => b[1] - a[1])
     .slice(1)
-    .reduce((acc, [key, value]) => acc + value, 0);
+    .reduce((acc, [, value]) => acc + value, 0)
 
-  return result;
-};
+  return result
+}
 
-console.log(equalizeArray([1, 2, 2, 3]));
-console.log(equalizeArray([3, 3, 2, 1, 3, 1, 1, 1, 1, 1, 1, 1]));
+console.log(equalizeArray([1, 2, 2, 3]))
+console.log(equalizeArray([3, 3, 2, 1, 3, 1, 1, 1, 1, 1, 1, 1]))

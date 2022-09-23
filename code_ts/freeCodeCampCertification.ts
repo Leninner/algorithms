@@ -1,12 +1,10 @@
 // NOTE: Palindrome Checker
 
-const plainStr = (str: string) => {
-  return str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-};
+const plainStr = (str: string) => str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
 
-function palindrome(str: string): boolean {
-  return plainStr(str).split('').reverse().join('') === plainStr(str).split('').join('');
-}
+const palindrome = (str: string): boolean =>
+  plainStr(str).split('').reverse().join('') ===
+  plainStr(str).split('').join('')
 
 // console.log(palindrome('eye'));
 // console.log(palindrome('race CAR'));
@@ -29,23 +27,24 @@ function palindrome(str: string): boolean {
  * No se puede usar el símbolo más de 3 veces
  */
 const getDescomposedNumber = (number: number) => {
-  const descomposeNumber = [];
-  let numberSize = number.toString().length;
-  let divisor = Math.pow(10, numberSize - 1);
-  let aux = 0;
+  let temporalNumber = number
+  const descomposeNumber = []
+  let numberSize = number.toString().length
+  let divisor = Math.pow(10, numberSize - 1)
+  let aux = 0
 
-  while (number) {
-    aux = Math.floor(number / divisor) * divisor;
-    descomposeNumber.push(aux);
-    number = number % divisor;
-    numberSize = number.toString().length;
-    divisor = Math.pow(10, numberSize - 1);
+  while (temporalNumber) {
+    aux = Math.floor(number / divisor) * divisor
+    descomposeNumber.push(aux)
+    temporalNumber = temporalNumber % divisor
+    numberSize = temporalNumber.toString().length
+    divisor = Math.pow(10, numberSize - 1)
   }
 
-  return descomposeNumber;
-};
+  return descomposeNumber
+}
 
-function convertToRoman(num: number) {
+const convertToRoman = (num: number) => {
   const ROMAN_NUMBERS = {
     I: 1,
     V: 5,
@@ -54,62 +53,63 @@ function convertToRoman(num: number) {
     C: 100,
     D: 500,
     M: 1000,
-  };
+  }
 
-  let posibleWays: any = [];
+  const posibleWays: any = []
 
-  const numberDescomposed = getDescomposedNumber(num);
-  const romanNumbers = Object.entries(ROMAN_NUMBERS);
+  const numberDescomposed = getDescomposedNumber(num)
+  const romanNumbers = Object.entries(ROMAN_NUMBERS)
 
-  const array = [1, 2, 3];
+  const array = [1, 2, 3]
 
   numberDescomposed.forEach((number) => {
     for (let i = 0; i < romanNumbers.length; i++) {
-      const [key, value] = romanNumbers[i];
+      const [key, value] = romanNumbers[i]
 
       if (number / value <= 3 && (number / value) % 1 === 0) {
-        posibleWays.push([key.repeat(number / value)]);
-        break;
+        posibleWays.push([key.repeat(number / value)])
+        break
       }
 
-      const upper500 = (number % value) / Math.pow(10, number.toString().length - 1);
+      const upper500 =
+        (number % value) / Math.pow(10, number.toString().length - 1)
 
       if (array.includes(upper500)) {
-        posibleWays.push([key + romanNumbers[i - 1][0].repeat(upper500)]);
-        break;
+        posibleWays.push([key + romanNumbers[i - 1][0].repeat(upper500)])
+        break
       }
 
-      const l = [4, 40, 400];
+      const l = [4, 40, 400]
 
       if (number % value === number) {
         if (l.includes(number)) {
-          posibleWays.push([romanNumbers[i - 1][0] + key]);
+          posibleWays.push([romanNumbers[i - 1][0] + key])
         } else {
-          posibleWays.push([romanNumbers[i - 2][0] + key]);
+          posibleWays.push([romanNumbers[i - 2][0] + key])
         }
 
-        break;
+        break
       }
     }
-  });
+  })
 
   // A partir de aquí, estamos comprobando que no se hayan repetido valores como VV, LL, DD. Caso contrario, vamos a intercambiarlo por el inmediato superior, por ejemplo, VV por L, LL por C, DD por M.
-  let result = posibleWays.flat().join('').split('');
+  const result = posibleWays.flat().join('').split('')
 
   const posibles: any = {
     V: 'X',
     L: 'C',
     D: 'M',
-  };
+  }
 
   for (let i = 0; i < result.length - 1; i++) {
     if (result[i] === result[i + 1] && result[i] in posibles) {
-      result[i] = posibles[result[i]];
-      result.splice(i + 1, 1);
+      result[i] = posibles[result[i]]
+      result.splice(i + 1, 1)
     }
   }
 
-  return result.join('');
+  return result.join('')
 }
 
 // console.log(convertToRoman(99));
@@ -120,58 +120,56 @@ function convertToRoman(num: number) {
 // Todos los inputs van a ser strings y si son letras, van a ser Mayúsculas
 // Ascii Range A-Z: 65-90
 
-function rot13(str: string) {
-  const codesFromStr = str.split('').map((value) => {
-    return value.charCodeAt(0);
-  });
+const rot13 = (str: string) => {
+  const codesFromStr = str.split('').map((value) => value.charCodeAt(0))
 
   return codesFromStr
     .map((value: number) => {
       if (value >= 65 && value <= 90) {
         if (value - 13 <= 64) {
-          value = 90 - (64 - (value - 13));
+          value = 90 - (64 - (value - 13))
         } else {
-          value -= 13;
+          value -= 13
         }
 
-        return String.fromCharCode(value);
+        return String.fromCharCode(value)
       }
 
-      return String.fromCharCode(value);
+      return String.fromCharCode(value)
     })
-    .join('');
+    .join('')
 }
 
 // console.log(rot13('SERR PBQR PNZC.'));
 
 // NOTE: Telephone Number Validator
 
-function telephoneCheck(str: string) {
-  const regExp = /^(1\s?)?(\d{3}|\(\d{3}\))[\-\s]?\d{3}[\-\s]?\d{4}$/;
+const telephoneCheck = (str: string) => {
+  const regExp = /^(1\s?)?(\d{3}|\(\d{3}\))[\-\s]?\d{3}[\-\s]?\d{4}$/
   // .test() retorna true or false
-  return regExp.test(str);
+  return regExp.test(str)
 }
 
 // telephoneCheck('1 555)-55-5555');
 
 // NOTE: Cash Register
 
-function checkCashRegister(price: number, cash: number, cid: any[]) {
-  let change = cash - price;
-  let aux = change;
+const checkCashRegister = (price: number, cash: number, cid: any[]) => {
+  let change = cash - price
+  const aux = change
 
-  const validate = cid.reduce((acc, [key, value]) => acc + value, 0);
+  const validate = cid.reduce((acc, [, value]) => acc + value, 0)
 
   if (validate < aux) {
-    return { status: 'INSUFFICIENT_FUNDS', change: [] };
+    return { status: 'INSUFFICIENT_FUNDS', change: [] }
   }
 
   if (validate === aux) {
-    return { status: 'CLOSED', change: [...cid] };
+    return { status: 'CLOSED', change: [...cid] }
   }
 
-  const currencyUnit: any = {
-    'ONE HUNDRED': 100,
+  const currencyUnit: { [key: string]: number } = {
+    ONE_HUNDRED: 100,
     TWENTY: 20,
     TEN: 10,
     FIVE: 5,
@@ -180,33 +178,36 @@ function checkCashRegister(price: number, cash: number, cid: any[]) {
     DIME: 0.1,
     NICKEL: 0.05,
     PENNY: 0.01,
-  };
+  }
 
-  let result = [];
+  const result = []
 
   while (change > 1) {
     for (let i = cid.length - 1; i >= 0; i--) {
       if (currencyUnit[cid[i][0]] <= change && cid[i][1] > 0) {
-        change = parseFloat((change - currencyUnit[cid[i][0]]).toFixed(2));
-        cid[i][1] -= currencyUnit[cid[i][0]];
-        result.push([cid[i][0], currencyUnit[cid[i][0]]]);
-        break;
+        change = parseFloat((change - currencyUnit[cid[i][0]]).toFixed(2))
+        cid[i][1] -= currencyUnit[cid[i][0]]
+        result.push([cid[i][0], currencyUnit[cid[i][0]]])
+        break
       }
     }
   }
 
-  let dollars: any = { QUARTER: 0.25, DIME: 0.1, NICKEL: 0.05, PENNY: 0.01 };
+  const dollars: any = { QUARTER: 0.25, DIME: 0.1, NICKEL: 0.05, PENNY: 0.01 }
 
-  if (cid[3][1] + cid[2][1] + cid[1][1] + cid[0][1] < aux && result.length == 0) {
-    return { status: 'INSUFFICIENT_FUNDS', change: [] };
+  if (
+    cid[3][1] + cid[2][1] + cid[1][1] + cid[0][1] < aux &&
+    result.length === 0
+  ) {
+    return { status: 'INSUFFICIENT_FUNDS', change: [] }
   } else {
     while (change) {
       for (let i = 3; i >= 0; i--) {
         if (dollars[cid[i][0]] <= change && cid[i][1]) {
-          change = parseFloat((change - dollars[cid[i][0]]).toFixed(2));
-          cid[i][1] -= dollars[cid[i][0]];
-          result.push([cid[i][0], dollars[cid[i][0]]]);
-          break;
+          change = parseFloat((change - dollars[cid[i][0]]).toFixed(2))
+          cid[i][1] -= dollars[cid[i][0]]
+          result.push([cid[i][0], dollars[cid[i][0]]])
+          break
         }
       }
     }
@@ -215,16 +216,16 @@ function checkCashRegister(price: number, cash: number, cid: any[]) {
   return {
     status: 'OPEN',
     change: Object.entries(
-      result.reduce((acc: any, [key, value]) => {
+      result.reduce((acc: { [key: string]: number }, [key, value]) => {
         if (acc[key]) {
-          acc[key] += value;
+          acc[key] += value
         } else {
-          acc[key] = value;
+          acc[key] = value
         }
-        return acc;
+        return acc
       }, {})
     ),
-  };
+  }
 }
 
 checkCashRegister(19.5, 20, [
@@ -237,4 +238,4 @@ checkCashRegister(19.5, 20, [
   ['TEN', 20],
   ['TWENTY', 60],
   ['ONE HUNDRED', 100],
-]);
+])

@@ -8,26 +8,26 @@
  */
 
 const jumpingOnClouds = (c, k) => {
-  let n = c.length;
-  let energy = 100;
-  let current_cloud = 0;
+  const n = c.length
+  let energy = 100
+  let current_cloud = 0
 
   while (true) {
-    current_cloud += k;
+    current_cloud += k
     if (current_cloud >= n) {
-      current_cloud -= n;
+      current_cloud -= n
     }
-    energy -= 1;
+    energy -= 1
     if (c[current_cloud] == 1) {
-      energy -= 2;
+      energy -= 2
     }
     if (current_cloud == 0) {
-      console.log(energy);
-      break;
+      console.log(energy)
+      break
     }
   }
 
-  return energy;
-};
+  return energy
+}
 
-export default jumpingOnClouds;
+export default jumpingOnClouds

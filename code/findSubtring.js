@@ -8,31 +8,31 @@
  */
 
 function findSubstring(s, k) {
-  const vowels = /[aeiou]/gi;
+  const vowels = /[aeiou]/gi
 
   if (s.match(vowels)?.length === 0) {
-    return 'Not found!';
+    return 'Not found!'
   }
 
-  let result = '';
-  let max = 0;
+  let result = ''
+  let max = 0
 
   for (let i = 0; i < s.length - k; i++) {
-    let newWord = s.substr(i, k);
+    const newWord = s.substr(i, k)
 
-    const vowelCount = newWord.match(vowels)?.length;
+    const vowelCount = newWord.match(vowels)?.length
 
     if (vowelCount > max) {
-      max = vowelCount;
-      result = newWord;
+      max = vowelCount
+      result = newWord
     } else {
-      continue;
+      continue
     }
   }
 
-  return result;
+  return result
 }
 
-console.log(findSubstring('azerdii', 5));
-console.log(findSubstring('aeiouia', 3));
-console.log(findSubstring('caperqiitefg', 5));
+console.log(findSubstring('azerdii', 5))
+console.log(findSubstring('aeiouia', 3))
+console.log(findSubstring('caperqiitefg', 5))

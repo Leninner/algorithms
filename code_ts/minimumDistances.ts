@@ -6,15 +6,15 @@
  */
 
 const minimumDistances = (a: number[]): number => {
-  if (Array.from(new Set(a)).length === a.length) return -1;
+  if (Array.from(new Set(a)).length === a.length) return -1
 
-  let distances: any = {};
+  const distances: any = {}
 
   for (let i = 0; i < a.length; i++) {
     if (a[i] in distances) {
-      distances[a[i]] = [i - distances[a[i]][0], 'modified'];
+      distances[a[i]] = [i - distances[a[i]][0], 'modified']
     } else {
-      distances[a[i]] = [i];
+      distances[a[i]] = [i]
     }
   }
 
@@ -22,9 +22,9 @@ const minimumDistances = (a: number[]): number => {
     ...Object.entries(distances)
       .filter(([key, value]: any[]) => value[1])
       .map(([key, value]: any[]) => value[0])
-  );
-};
+  )
+}
 
-console.log(minimumDistances([7, 1, 3, 4, 1, 7])); // 3 => 4 - 1 = 3
-console.log(minimumDistances([3, 2, 1, 2, 3])); // 2
-console.log(minimumDistances([1, 2, 3, 4, 5, 6])); // -1
+console.log(minimumDistances([7, 1, 3, 4, 1, 7])) // 3 => 4 - 1 = 3
+console.log(minimumDistances([3, 2, 1, 2, 3])) // 2
+console.log(minimumDistances([1, 2, 3, 4, 5, 6])) // -1

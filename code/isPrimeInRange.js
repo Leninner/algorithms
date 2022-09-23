@@ -6,19 +6,19 @@
  */
 
 export const isPrimeInRange = (a, b) => {
-  let primes = [];
+  const primes = []
 
   for (let i = a; i <= b; i++) {
-    let cont = 0;
+    let cont = 0
 
     for (let j = 0; j <= i; j++) {
       if (i % j === 0) {
-        cont++;
+        cont++
       }
     }
 
-    cont > 2 ? '' : primes.push(i);
+    cont > 2 ? '' : primes.push(i)
   }
 
-  return primes;
-};
+  return primes
+}

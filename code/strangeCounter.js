@@ -8,36 +8,36 @@
  */
 
 function strangeCounter(t) {
-    // NOTE: Solución para números pequeños
+  // NOTE: Solución para números pequeños
 
-    // let cont = 4,
-    //     aux = 3,
-    //     i = 1;
+  // let cont = 4,
+  //     aux = 3,
+  //     i = 1;
 
-    // while (i <= t) {
-    //     cont--;
-    //     if (cont == 0) {
-    //         cont = aux * 2;
-    //         aux = cont;
-    //         i++;
-    //     } else {
-    //         i++;
-    //     }
-    // }
+  // while (i <= t) {
+  //     cont--;
+  //     if (cont == 0) {
+  //         cont = aux * 2;
+  //         aux = cont;
+  //         i++;
+  //     } else {
+  //         i++;
+  //     }
+  // }
 
-    // return cont;
+  // return cont;
 
-    //NOTE: Solución buena para números realmente grandes
+  // NOTE: Solución buena para números realmente grandes
 
-    let cont = 3;
+  let cont = 3
 
-    while (t > cont) {
-        t = t - cont;
-        cont *= 2;
-    }
+  while (t > cont) {
+    t = t - cont
+    cont *= 2
+  }
 
-    return cont - t + 1;
+  return cont - t + 1
 }
 
 // console.log(strangeCounter(4)); // 6
-console.log(strangeCounter(99999997668)); // 3079217434
+console.log(strangeCounter(99999997668)) // 3079217434

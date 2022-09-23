@@ -57,24 +57,24 @@
 // };
 
 const superReducedString = (s) => {
-  if (s === '') return 'Empty String';
-  let results = [];
+  if (s === '') return 'Empty String'
+  const results = []
 
   for (let i = 0; i < s.length; i++) {
     if (results[results.length - 1] === s[i]) {
-      results.splice(results.length - 1, 1);
-      continue;
+      results.splice(results.length - 1, 1)
+      continue
     }
 
-    results.push(s[i]);
+    results.push(s[i])
   }
 
-  return results.join('');
-};
+  return results.join('')
+}
 
 console.log(
   superReducedString(
     'zztqooauhujtmxnsbzpykwlvpfyqijvdhuhiroodmuxiobyvwwxupqwydkpeebxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh'
   )
-); // tqauhujtmxnsbzpykwlvpfyqijvdhuhirdmuxiobyvxupqwydkpbxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh
+) // tqauhujtmxnsbzpykwlvpfyqijvdhuhirdmuxiobyvxupqwydkpbxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh
 // tqauhujtmxnsbzpykwlvpfyqijvdhuhirdmuxiobyvxupqwydkpbxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh

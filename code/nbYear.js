@@ -9,15 +9,15 @@
  */
 
 const nbYear = (p0, percent, aug, p) => {
-  let newPercent = percent / 100,
-    initialPoblation = p0,
-    year = 0;
+  const newPercent = percent / 100
+  let initialPoblation = p0
+  let year = 0
 
   while (initialPoblation < p) {
-    initialPoblation += parseInt(initialPoblation * newPercent + aug);
-    year++;
+    initialPoblation += parseInt(initialPoblation * newPercent + aug)
+    year++
   }
 
-  year = initialPoblation > p ? year++ : year;
-  return year;
-};
+  year = initialPoblation > p ? year++ : year
+  return year
+}

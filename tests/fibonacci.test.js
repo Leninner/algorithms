@@ -1,10 +1,10 @@
-import { fibonacciInArray } from '../code/fibonacci.js';
+import { fibonacciInArray } from '../code/fibonacci.js'
 
-xdescribe('Serie de fibanacci', () => {
+describe('Serie de fibanacci', () => {
   test('Debe funcionar', () => {
-    expect(fibonacciInArray(1)).toStrictEqual([1]);
-    expect(fibonacciInArray(2)).toStrictEqual([1, 1]);
-    expect(fibonacciInArray(3)).toStrictEqual([1, 1, 2]);
-    expect(fibonacciInArray(4)).toStrictEqual([1, 1, 2, 3]);
-  });
-});
+    expect(fibonacciInArray(1)).toStrictEqual([1])
+    expect(fibonacciInArray(2)).toStrictEqual([1, 1])
+    expect(fibonacciInArray(3)).toStrictEqual([1, 1, 2])
+    expect(fibonacciInArray(4)).toStrictEqual([1, 1, 2, 3])
+  })
+})

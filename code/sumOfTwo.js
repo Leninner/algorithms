@@ -12,26 +12,27 @@
 
 // return val;
 
-const sumOfTwo = (arr, k) => {
-  return arr.some((value, index) => {
+const sumOfTwo = (arr, k) =>
+  arr.some((value, index) => {
     if (arr.includes(k - value) && index !== arr.indexOf(k - value)) {
-      return true;
+      return true
     } else {
-      return false;
+      return false
     }
-  }); // comprueban si hay algún para de números que cumplen la condicion de sumar k
-};
-
-export default sumOfTwo;
+  }) // comprueban si hay algún para de números que cumplen la condicion de sumar k
+export default sumOfTwo
 
 const sumOfTwoRevisited = (array, target) => {
   for (let i = 0; i < array.length; i++) {
-    if (array.includes(target - array[i]) && array.indexOf(target - array[i]) !== i) {
-      return [i, array.indexOf(target - array[i])];
+    if (
+      array.includes(target - array[i]) &&
+      array.indexOf(target - array[i]) !== i
+    ) {
+      return [i, array.indexOf(target - array[i])]
     }
   }
 
-  return 'No se encontró ningún par';
-};
+  return 'No se encontró ningún par'
+}
 
-console.log(sumOfTwoRevisited([9, 6, 4, 2, 2, 2, 2, 2], 15));
+console.log(sumOfTwoRevisited([9, 6, 4, 2, 2, 2, 2, 2], 15))

@@ -7,19 +7,19 @@
  */
 
 const pickingNumbers = (a) => {
-  let frecuencia = new Array(101).fill(0);
-  let result = Number.MIN_VALUE;
+  const frecuencia = new Array(101).fill(0)
+  let result = Number.MIN_VALUE
 
   for (let i = 0; i < a.length; i++) {
-    let index = a[i];
-    frecuencia[index]++; // frecuencia[index] = frecuencia[index] + 1;
+    const index = a[i]
+    frecuencia[index]++ // frecuencia[index] = frecuencia[index] + 1;
   }
 
   for (let i = 1; i <= 100; i++) {
-    result = Math.max(result, frecuencia[i] + frecuencia[i - 1]);
+    result = Math.max(result, frecuencia[i] + frecuencia[i - 1])
   }
 
-  return result;
-};
+  return result
+}
 
-export default pickingNumbers;
+export default pickingNumbers

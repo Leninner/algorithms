@@ -8,23 +8,23 @@
 // Usando un stack LIFO (Last in First Out)
 
 function superReducedString(s: string): string {
-  if (s === '') return 'Empty String';
-  let results: string[] = [];
+  if (s === '') return 'Empty String'
+  const results: string[] = []
 
   for (let i = 0; i < s.length; i++) {
     if (results[results.length - 1] === s[i]) {
-      results.splice(results.length - 1, 1);
-      continue;
+      results.splice(results.length - 1, 1)
+      continue
     }
 
-    results.push(s[i]);
+    results.push(s[i])
   }
 
-  return results.join('') || 'Empty String';
+  return results.join('') || 'Empty String'
 }
 
 console.log(
   superReducedString(
     'zztqooauhujtmxnsbzpykwlvpfyqijvdhuhiroodmuxiobyvwwxupqwydkpeebxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh'
   )
-);
+)

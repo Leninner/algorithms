@@ -1,10 +1,10 @@
 const repeatString = (number, string) => {
-  let result = '';
+  let result = ''
   for (let i = 0; i < number; i++) {
-    result += string;
+    result += string
   }
 
-  return result;
-};
+  return result
+}
 
-console.log(repeatString(4, 'Hello '));
+console.log(repeatString(4, 'Hello '))

@@ -6,12 +6,12 @@
 
 function linearSearch(array, target) {
   for (let i = 0; i < array.length; i++) {
-    //O (n)
+    // O (n)
     if (array[i] === target) {
-      //O (1)
-      return i; // O (1)
+      // O (1)
+      return i // O (1)
     }
   }
 
-  return -1; // O (1)
+  return -1 // O (1)
 }
