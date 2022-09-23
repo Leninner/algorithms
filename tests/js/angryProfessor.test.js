@@ -1,4 +1,4 @@
-import { angryProfessor } from '../code/angryProfessor'
+import { angryProfessor } from '../../code/angryProfessor'
 
 test('El código debe funcionar correctamente', () => {
   expect(angryProfessor(2, [0, -1, 2, 1])).toBe('NO')

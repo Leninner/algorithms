@@ -1,4 +1,4 @@
-import { climbingLeaderboard } from '../code_ts/climbingLeaderboard'
+import { climbingLeaderboard } from '../../code_ts/climbingLeaderboard'
 
 describe('climbingLeaderboard', () => {
   describe('When the ranked scores are [100,80,80,50]', () => {

@@ -1,4 +1,4 @@
-import domainName from '../code/domainName'
+import domainName from '../../code/domainName'
 
 test('Debe dar respuestas correctas', () => {
   expect(domainName('http://github.com/carbonfive/raygun')).toBe('github')

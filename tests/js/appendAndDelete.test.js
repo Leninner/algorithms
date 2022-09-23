@@ -1,4 +1,4 @@
-import { appendAndDelete } from '../code/appendAndDelete'
+import { appendAndDelete } from '../../code/appendAndDelete'
 
 describe('appendAndDelete', () => {
   test('Debe dar resultados correctos', () => {

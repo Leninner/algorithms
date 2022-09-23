@@ -1,4 +1,4 @@
-import { fibonacciInArray } from '../code/fibonacci.js'
+import { fibonacciInArray } from '../../code/fibonacci.js'
 
 describe('Serie de fibanacci', () => {
   test('Debe funcionar', () => {

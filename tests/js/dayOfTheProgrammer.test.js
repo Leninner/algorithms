@@ -1,4 +1,4 @@
-import { dayOfProgrammer } from '../code/dayOfTheProgrammer'
+import { dayOfProgrammer } from '../../code/dayOfTheProgrammer'
 
 test('El código debería ser correcto', () => {
   expect(dayOfProgrammer(1918)).toBe('26.09.1918')

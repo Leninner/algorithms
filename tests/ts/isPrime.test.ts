@@ -1,4 +1,4 @@
-import { isPrime } from '../code/isPrime'
+import { isPrime } from '../../code/isPrime'
 
 test('Debe dar soluciones correctas', () => {
   expect(isPrime(2)).toBe(true)
