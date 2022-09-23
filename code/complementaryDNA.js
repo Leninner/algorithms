@@ -3,15 +3,15 @@
 // Complemento de G = C
 // Complemento de C = G
 
-function DNAStrand(dna) {
+const DNAStrand = (dna) => {
   const arregloDNA = []
 
   dna.split('').forEach((element) => {
-    if (element == 'A') {
+    if (element === 'A') {
       arregloDNA.push('T')
-    } else if (element == 'T') {
+    } else if (element === 'T') {
       arregloDNA.push('A')
-    } else if (element == 'G') {
+    } else if (element === 'G') {
       arregloDNA.push('C')
     } else {
       arregloDNA.push('G')

@@ -7,7 +7,7 @@
     "test:watch": "jest --watch",
     "preupdate": "git commit -a  -m '[UPDATE] files'",
     "update": "git push",
-    "lint": "eslint . --fix",
+    "lint": "eslint . --ext [ts,tsx,js,jsx] --fix",
     "prepare": "husky install"
   },
   "repository": {

@@ -5,7 +5,7 @@
 // b = budget
 // TODO: Encuentre el costo para comprarlos. Si no es posible comprar ambos artículos, devuélva -1.
 
-function getMoneySpent(keyboards, drives, b) {
+const getMoneySpent = (keyboards, drives, b) => {
   const prices = []
   let mayor = 0
 
@@ -18,16 +18,14 @@ function getMoneySpent(keyboards, drives, b) {
   })
 
   prices.forEach((precio) => {
-    precio > mayor ? mayor = precio : mayor = mayor
+    precio > mayor ? (mayor = precio) : (mayor = mayor)
   })
 
-  if (mayor == 0) {
-    console.log(-1)
+  if (mayor === 0) {
     return -1
-  } else {
-    console.log(mayor)
-    return mayor
   }
+
+  return mayor
 }
 
 getMoneySpent([50, 40, 60], [5, 8, 12], 60) // 58

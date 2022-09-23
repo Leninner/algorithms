@@ -8,12 +8,13 @@
 
 const rotateLeft = (d: number, arr: number[]): number[] => {
   let aux: number
+  let unitLeftRotation = d
 
-  while (d) {
+  while (unitLeftRotation) {
     aux = arr[0]
     arr.splice(0, 1)
     arr.push(aux)
-    d--
+    unitLeftRotation--
   }
 
   return arr

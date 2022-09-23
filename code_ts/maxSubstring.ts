@@ -4,6 +4,7 @@
  */
 
 const maxSubstring = (s: string): string => {
+  let max = ''
   const results: string[] = []
   let temporalString = ''
 
@@ -14,7 +15,7 @@ const maxSubstring = (s: string): string => {
     }
 
     results.push(temporalString)
-    s = s.slice(s.indexOf(s[i]) + 1)
+    max = max.slice(max.indexOf(s[i]) + 1)
     i = -1
     temporalString = ''
   }
@@ -22,7 +23,7 @@ const maxSubstring = (s: string): string => {
   results.push(temporalString)
 
   return results.reduce(
-    (acc: string, curr) => (acc = curr.length > acc.length ? curr : acc),
+    (acc: string, curr) => (acc.length > curr.length ? acc : curr),
     ''
   )
 }

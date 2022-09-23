@@ -3,17 +3,12 @@
 // to the innermost boundary and place them
 // in a clockwise manner
 
-function sortBoundaryWise(a) {
+const sortBoundaryWise = (a) => {
   let startRowIndex = 0
   let startColumnIndex = 0
 
   let endRowIndex = a.length
   let endColumnIndex = a[0].length
-
-  let n_startRowIndex = 0
-  let n_startColumnIndex = 0
-  let n_endRowIndex = endRowIndex
-  let n_endColumnIndex = endColumnIndex
 
   while (startRowIndex < endRowIndex && startColumnIndex < endColumnIndex) {
     const boundary = []

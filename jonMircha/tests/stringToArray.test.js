@@ -1,6 +1,6 @@
 import { stringToArray } from '../code/stringToArray'
 
-test.skip('La función tiene que devolver un arreglo de la cadena separada por un separador', () => {
+test('La función tiene que devolver un arreglo de la cadena separada por un separador', () => {
   expect(stringToArray('Hola, mi nombre es Lenin', ' ')).toStrictEqual([
     'Hola,',
     'mi',
@@ -14,6 +14,6 @@ test.skip('La función tiene que devolver un arreglo de la cadena separada por u
   ])
 })
 
-test.skip('Si la función recibe argumentos erroneos devovler falso', () => {
+test('Si la función recibe argumentos erroneos devovler falso', () => {
   expect(stringToArray(78, 5)).toBe(false)
 })

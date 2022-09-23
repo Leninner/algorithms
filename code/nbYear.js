@@ -8,7 +8,7 @@
  * @link https://www.codewars.com/kata/563b662a59afc2b5120000c6/train/javascript
  */
 
-const nbYear = (p0, percent, aug, p) => {
+export const nbYear = (p0, percent, aug, p) => {
   const newPercent = percent / 100
   let initialPoblation = p0
   let year = 0

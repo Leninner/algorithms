@@ -4,16 +4,18 @@
  * @returns {string} max and min number
  */
 
-const highAndLow = (numbers) => {
+export const highAndLow = (numbers) => {
   const arrayOfNumbers = numbers.split(' ')
 
   const max = arrayOfNumbers.reduce((acc, curr) => {
+    // eslint-disable-next-line no-param-reassign
     acc = Math.max(acc, curr)
 
     return acc
   })
 
   const min = arrayOfNumbers.reduce((acc, curr) => {
+    // eslint-disable-next-line no-param-reassign
     acc = Math.min(acc, curr)
 
     return acc

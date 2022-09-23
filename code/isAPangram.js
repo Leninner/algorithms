@@ -6,11 +6,12 @@ const isPangram = (string) => {
 
   return (
     Array.from(new Set(arrayOfCodes)).reduce((acc, curr) => {
+      let sum = acc
       if (curr >= 65 && curr <= 90) {
-        acc += curr
+        sum += curr
       }
 
-      return acc
+      return sum
     }, 0) === 2015
   )
 }

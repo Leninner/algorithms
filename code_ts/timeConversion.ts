@@ -1,4 +1,4 @@
-function timeConversion(s: string): string {
+const timeConversion = (s: string): string => {
   const utilPortion = s.slice(-2)
 
   return s.slice(0, 2) === '12'

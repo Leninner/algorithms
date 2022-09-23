@@ -18,11 +18,12 @@ class StackAmazon {
   max() {
     return this.arreglo.length
       ? this.arreglo.reduce((acc, curr) => {
+          let max = acc
           if (acc < curr) {
-            acc = curr
+            max = curr
           }
 
-          return acc
+          return max
         })
       : null
   }

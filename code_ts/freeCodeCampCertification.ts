@@ -2,7 +2,7 @@
 
 const plainStr = (str: string) => str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
 
-const palindrome = (str: string): boolean =>
+export const palindrome = (str: string): boolean =>
   plainStr(str).split('').reverse().join('') ===
   plainStr(str).split('').join('')
 
@@ -44,7 +44,7 @@ const getDescomposedNumber = (number: number) => {
   return descomposeNumber
 }
 
-const convertToRoman = (num: number) => {
+export const convertToRoman = (num: number) => {
   const ROMAN_NUMBERS = {
     I: 1,
     V: 5,
@@ -120,19 +120,17 @@ const convertToRoman = (num: number) => {
 // Todos los inputs van a ser strings y si son letras, van a ser Mayúsculas
 // Ascii Range A-Z: 65-90
 
-const rot13 = (str: string) => {
+export const rot13 = (str: string) => {
   const codesFromStr = str.split('').map((value) => value.charCodeAt(0))
 
   return codesFromStr
     .map((value: number) => {
       if (value >= 65 && value <= 90) {
         if (value - 13 <= 64) {
-          value = 90 - (64 - (value - 13))
-        } else {
-          value -= 13
+          return 90 - (64 - (value - 13))
         }
 
-        return String.fromCharCode(value)
+        return value - 13
       }
 
       return String.fromCharCode(value)
@@ -144,7 +142,7 @@ const rot13 = (str: string) => {
 
 // NOTE: Telephone Number Validator
 
-const telephoneCheck = (str: string) => {
+export const telephoneCheck = (str: string) => {
   const regExp = /^(1\s?)?(\d{3}|\(\d{3}\))[\-\s]?\d{3}[\-\s]?\d{4}$/
   // .test() retorna true or false
   return regExp.test(str)

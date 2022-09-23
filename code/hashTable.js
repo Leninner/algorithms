@@ -69,7 +69,7 @@ function helloWorld(name) {
 }
  */
 
-function solution(queryType, query) {
+const solution = (queryType, query) => {
   let hashmap = {}
   let result = 0
 

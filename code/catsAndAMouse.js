@@ -2,14 +2,16 @@
 // y = Cat B
 // z = Mouse C
 
-function catAndMouse(x, y, z) {
+const catAndMouse = (x, y, z) => {
   if (Math.abs(z - x) > Math.abs(z - y)) {
-    console.log('Cat B')
-  } else if (Math.abs(z - x) < Math.abs(z - y)) {
-    console.log('Cat A')
-  } else {
-    console.log('Mouse C')
+    return 'Cat B'
   }
+
+  if (Math.abs(z - x) < Math.abs(z - y)) {
+    return 'Cat A'
+  }
+
+  return 'Mouse C'
 }
 
 catAndMouse(2, 2, 5)

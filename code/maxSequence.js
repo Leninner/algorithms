@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c/train/javascript
 
-const maxSequence = (arr) => {
+export const maxSequence = (arr) => {
   if (!arr.length) return 0
   if (arr.every((value) => value < 0)) return 0
 

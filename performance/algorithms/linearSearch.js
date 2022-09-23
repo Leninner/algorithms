@@ -4,7 +4,7 @@
  * Complexidad espacial = O(1)
  */
 
-function linearSearch(array, target) {
+export const linearSearch = (array, target) => {
   for (let i = 0; i < array.length; i++) {
     // O (n)
     if (array[i] === target) {

@@ -1,4 +1,4 @@
-const tribonacci = (signature: number[], n: number) => {
+export const tribonacci = (signature: number[], n: number) => {
   const tribonacci = n < 3 ? [...signature].splice(0, n) : [...signature]
   let a = signature[0]
   let b = signature[1]

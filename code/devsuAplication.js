@@ -23,7 +23,7 @@ console.log(doSome(18))
 console.log(doSome(21))
 15968828921
 
-function maxSubarrayProduct(arr) {
+const maxSubarrayProduct = (arr) => {
   const result = []
   let suma = 1
   let resta = 0

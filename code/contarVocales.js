@@ -1,18 +1,14 @@
 // Encontrar el número de letras encontradas utilizando expresiones regulares
 
-function getCount(str) {
+const getCount = (str) => {
   const expresion = /[a,e,i,o,u]/gi
-  const array_emparejamientos = str.match(expresion)
+  const emparejamientos = str.match(expresion)
 
-  if (!array_emparejamientos) {
+  if (!emparejamientos) {
     return 0
-  } else {
-    return array_emparejamientos.length
   }
-}
 
-// function getCount(str) {
-//     return str.replace(/[^aeiou]/gi, '').length;
-//   }
+  return emparejamientos.length
+}
 
 console.log(getCount('my pyx')) // 0

@@ -4,7 +4,7 @@ const breackCamelCase = (camelCase) =>
     .reduce(
       (acc, curr) =>
         curr.match(new RegExp(/[A-Z0-9]/))
-          ? (acc += ' ' + curr)
+          ? (acc += ` ${curr}`)
           : (acc += curr),
       ''
     )

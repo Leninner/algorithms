@@ -1,4 +1,4 @@
-const composeNumber = (number) => {
+export const composeNumber = (number) => {
   let result = ''
   let newNumber = number
   let numberSize = newNumber.toString().length

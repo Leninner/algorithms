@@ -7,7 +7,7 @@
  *  2. INTEGER_ARRAY player
  */
 
-function climbingLeaderboard(ranked, player) {
+const climbingLeaderboard = (ranked, player) => {
   const rankedRefactorized = Array.from(new Set(ranked))
   const results = []
 

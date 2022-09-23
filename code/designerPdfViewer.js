@@ -2,7 +2,7 @@
 // h = array con alturas de las letras
 // word = palabra
 
-function designerPdfViewer(h, word) {
+const designerPdfViewer = (h, word) => {
   // Write your code here
   const arreglo = []
   let y = 97

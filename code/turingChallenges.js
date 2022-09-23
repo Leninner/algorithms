@@ -23,9 +23,9 @@ export const comprobateBrackets = (str) => {
   const stack = []
 
   const bracketsPairs = {
-    '(': ')',
-    '[': ']',
-    '{': '}',
+    ['(']: ')',
+    ['[']: ']',
+    ['{']: '}',
   }
 
   for (let i = 0; i < array.length; i++) {
@@ -51,7 +51,7 @@ export const moveNPositionCounterClockwise = (k, nums) => {
   return nums.concat(portion)
 }
 
-const sumLeftLeavesInABinaryTree = (root) => {
+export const sumLeftLeavesInABinaryTree = (root) => {
   if (!root) return 0
 
   let sum = 0

@@ -5,14 +5,16 @@
 // int m: the minimum cost of a game
 // int s: the starting budget
 
-function howManyGames(p, d, m, s) {
+const howManyGames = (p, d, m, s) => {
   // Return the number of games you can buy
 
   // NOTE: Solución correcta
 
   let games = 0
   while (s >= 0) {
+    // eslint-disable-next-line no-param-reassign
     s -= p
+    // eslint-disable-next-line no-param-reassign
     p = Math.max(p - d, m) // El método Math.max devuelve el mayor entre 2 números
     games += 1
   }

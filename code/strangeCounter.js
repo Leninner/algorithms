@@ -7,7 +7,7 @@
  * The function accepts LONG_INTEGER t as parameter.
  */
 
-function strangeCounter(t) {
+const strangeCounter = (t) => {
   // NOTE: Solución para números pequeños
 
   // let cont = 4,
@@ -30,9 +30,10 @@ function strangeCounter(t) {
   // NOTE: Solución buena para números realmente grandes
 
   let cont = 3
+  let aux = t
 
-  while (t > cont) {
-    t = t - cont
+  while (aux > cont) {
+    aux -= cont
     cont *= 2
   }
 

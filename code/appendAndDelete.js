@@ -2,9 +2,7 @@ export const appendAndDelete = (s, t, k) => {
   let i
 
   for (i = 0; i < s.length; i++) {
-    if (s[i] != t[i]) {
-      break
-    }
+    if (s[i] !== t[i]) break
   }
 
   const deletesRequired = s.length - i
@@ -12,9 +10,7 @@ export const appendAndDelete = (s, t, k) => {
   const minRequired = deletesRequired + addsRequired
   const max = s.length + t.length
 
-  if (k < minRequired || (k % 2 != minRequired % 2 && k < max)) {
-    return 'No'
-  } else {
-    return 'Yes'
-  }
+  if (k < minRequired || (k % 2 !== minRequired % 2 && k < max)) return 'No'
+
+  return 'Yes'
 }

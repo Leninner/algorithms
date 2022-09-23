@@ -1,6 +1,6 @@
 // calcular  la serie de fibonaacci  e ir imprimiéndola en la pantalla
 
-const fibonacci = (n) => {
+export const fibonacci = (n) => {
   let a = 1
   let b = 0
   let curr = 0
@@ -8,14 +8,13 @@ const fibonacci = (n) => {
   let i = 0
   while (i < n) {
     curr = a + b
-    console.log(curr)
     a = b
     b = curr
     i++
   }
 }
 
-const fibonacciRevisited = (n) => {
+export const fibonacciRevisited = (n) => {
   if (n === 0 || n === 1) return n
   let a = 1
   let b = 0
@@ -50,14 +49,14 @@ export const fibonacciInArray = (n) => {
 
 // Serie de fibonacci con recursividad
 
-const fibonacciRecursive = (n) => {
+export const fibonacciRecursive = (n) => {
   if (n === 0 || n === 1) return n
   return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
 }
 
 // Recursividad con memoization
 
-const fibonacciMemoization = (n, memo = []) => {
+export const fibonacciMemoization = (n, memo = []) => {
   if (memo[n] !== undefined) return memo[n]
   if (n === 0 || n === 1) return n
   return (memo[n] =

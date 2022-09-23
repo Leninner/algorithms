@@ -1,6 +1,6 @@
 import { moveNTimes } from '../code/moveNTimes.js'
 
-describe.skip('Función para mover N veces una letra', () => {
+describe('Función para mover N veces una letra', () => {
   test('Debe dar resultados correctos', () => {
     expect(moveNTimes('a', 4)).toBe('e')
     expect(moveNTimes('a', 0)).toBe('a')

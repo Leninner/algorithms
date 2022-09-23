@@ -1,10 +1,11 @@
 const sumOfPositive = (arrayOfNumbers) =>
   arrayOfNumbers.reduce((acc, curr) => {
+    let sum = acc
     if (!(curr < 0)) {
-      acc += curr
+      sum += curr
     }
 
-    return acc
+    return sum
   }, 0)
 
 console.log(sumOfPositive([1, 2, 4, -7, -8, 9]))

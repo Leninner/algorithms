@@ -1,4 +1,4 @@
-function miniMaxSum(arr) {
+export const miniMaxSum = (arr) => {
   let valor = 0
   let max = 0
   let y = 0
@@ -6,7 +6,7 @@ function miniMaxSum(arr) {
   while (y < arr.length) {
     valor = 0
     for (let i = 0; i < arr.length; i++) {
-      if (i != y) {
+      if (i !== y) {
         valor += arr[i]
       }
     }

@@ -1,14 +1,16 @@
 // https://www.hackerrank.com/challenges/find-digits/problem
 
-function findDigits(n) {
+const findDigits = (n) => {
   // Write your code here
   const float = Array.from(n.toString())
   let cont = 0
+
   float.forEach((elemento) => {
-    if (n % elemento == 0) {
+    if (n % elemento === 0) {
       cont++
     }
   })
+
   return cont
 }
 

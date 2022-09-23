@@ -1,7 +1,7 @@
-function findOdd(A) {
+const findOdd = (a) => {
   const counter = {}
 
-  A.forEach((value) => {
+  a.forEach((value) => {
     if (counter[value]) {
       counter[value]++
     } else {
@@ -10,7 +10,7 @@ function findOdd(A) {
   })
 
   return parseInt(
-    Object.entries(counter).find(([key, value]) => value % 2 !== 0)[0]
+    Object.entries(counter).find(([, value]) => value % 2 !== 0)[0]
   )
 }
 

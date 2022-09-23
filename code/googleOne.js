@@ -17,13 +17,13 @@
 // @param A arreglo de personas
 // @param S mensaje codificado
 
-function decodificar(A, S) {
-  let i = A[0]
-  let finalString = S[0]
+const decodificar = (a, s) => {
+  let i = a[0]
+  let finalString = s[0]
 
-  while (finalString.length < A.length) {
-    finalString += S[i]
-    i = A[i]
+  while (finalString.length < a.length) {
+    finalString += s[i]
+    i = a[i]
   }
 
   console.log(finalString)

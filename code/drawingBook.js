@@ -6,32 +6,35 @@
 // Par = Lado izquierdo
 // Impar = Lado derecho
 
-function pageCount(n, p) {
+const pageCount = (n, p) => {
   let giroPaginas = 0
   // p OR q
-  if (p == n || p == 1) {
-    console.log(0)
-  } else {
-    // p OR (q AND r)
-    if (n - p < p - 1 || (n - p == p - 1 && n % 2 != 0)) {
-      // Si llego más rápido por atrás entonces
-      for (let i = n; i >= p; i--) {
-        if (i == n) {
-          continue
-        }
-        if (i % 2 != 0) {
-          giroPaginas++
-        }
+  if (p === n || p === 1) {
+    return 0
+  }
+
+  // p OR (q AND r)
+  if (n - p < p - 1 || (n - p === p - 1 && n % 2 !== 0)) {
+    // Si llego más rápido por atrás entonces
+    for (let i = n; i >= p; i--) {
+      if (i === n) {
+        continue
       }
-    } else {
-      for (let i = 1; i <= p; i++) {
-        if (i % 2 == 0) {
-          giroPaginas++
-        }
+      if (i % 2 !== 0) {
+        giroPaginas++
       }
     }
+
+    return
   }
-  console.log(giroPaginas)
+
+  for (let i = 1; i <= p; i++) {
+    if (i % 2 === 0) {
+      giroPaginas++
+    }
+  }
+
+  return giroPaginas
 }
 
 pageCount(5, 3) // 1

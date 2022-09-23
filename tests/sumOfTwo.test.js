@@ -1,6 +1,6 @@
 import sumOfTwo from '../code/sumOfTwo'
 
-test.skip('Debe dar resultados correctos', () => {
+test('Debe dar resultados correctos', () => {
   expect(sumOfTwo([1, 2, 3], 4)).toBe(true)
   expect(sumOfTwo([1, 2, 3], 5)).toBe(true)
   expect(sumOfTwo([, 1, 1, 1, 1, 1, 1, 4, 5, 4, 5, 4, 5], 78)).toBe(false)

@@ -23,10 +23,6 @@ const mcd = (x, y) => {
   return x
 }
 
-const convertFrac = (lst) => {}
-
-function mcm(a, b) {
-  return !a || !b ? 0 : Math.abs((a * b) / mcd(a, b))
-}
+const mcm = (a, b) => (!a || !b ? 0 : Math.abs((a * b) / mcd(a, b)))
 
 console.log(mcm(6, 7))

@@ -1,6 +1,6 @@
 import { vowelsAndConsonants } from '../code/vocalesYConsonantes'
 
-test.skip('Debe quitar todas las vocales que encuentre', () => {
+test('Debe quitar todas las vocales que encuentre', () => {
   expect(vowelsAndConsonants('Lenin Mazabanda. ¿Cómo estás?')).toBe(
     'Lnn Mzbnd. ¿Cm sts?'
   )

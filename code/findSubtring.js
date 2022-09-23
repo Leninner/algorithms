@@ -7,7 +7,7 @@
  *  2. INTEGER k - 5
  */
 
-function findSubstring(s, k) {
+const findSubstring = (s, k) => {
   const vowels = /[aeiou]/gi
 
   if (s.match(vowels)?.length === 0) {

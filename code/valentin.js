@@ -16,10 +16,3 @@ const printPhrase = () => {
 }
 
 printPhrase()
-
-const a = 19
-const b = 10
-
-// < > <= >= == !=
-// Math.min(10, 0) 0
-// Math.max(10, -5) -5

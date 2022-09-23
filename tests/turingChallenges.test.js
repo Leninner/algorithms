@@ -5,7 +5,7 @@ import {
   moveNPositionCounterClockwise,
 } from '../code/turingChallenges.js'
 
-describe.skip('Strange counter in basketball', () => {
+describe('Strange counter in basketball', () => {
   const testCases = [
     ['5', '2', 'C', 'D', '+'],
     ['1', '2', '+', 'D'],
@@ -64,7 +64,7 @@ describe('Verify if the brackets are correct', () => {
   })
 })
 
-describe.skip('Move N spaces in an array', () => {
+describe('Move N spaces in an array', () => {
   const testCasesClockwise = [
     [1, [1, 2, 3, 4, 5], [5, 1, 2, 3, 4]],
     [2, [1, 2, 3, 4, 5], [4, 5, 1, 2, 3]],

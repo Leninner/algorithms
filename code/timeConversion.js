@@ -1,8 +1,8 @@
 const timeConversion = (s) => {
   const formato = s.slice(-2)
-  if (formato == 'AM') {
+  if (formato === 'AM') {
     const hora = s.slice(0, 2)
-    if (hora == '12') {
+    if (hora === '12') {
       return s.replace(hora, '00').slice(0, -2)
     } else {
       return s.slice(0, -2)

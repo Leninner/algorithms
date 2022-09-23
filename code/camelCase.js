@@ -1,12 +1,16 @@
-function toCamelCase(str) {
+const toCamelCase = (str) => {
   let arregloStr
   let stringFinal = ''
 
-  if (str == '') {
+  if (str === '') {
     return ''
-  } else if (str.includes('_')) {
+  }
+
+  if (str.includes('_')) {
     arregloStr = str.split('_')
-  } else if (str.includes('-')) {
+  }
+
+  if (str.includes('-')) {
     arregloStr = str.split('-')
   }
 
@@ -20,14 +24,16 @@ function toCamelCase(str) {
         stringFinal += arregloStr[i]
       }
     }
-  } else {
-    for (let i = 0; i < arregloStr.length; i++) {
-      if (arregloStr[i][0] !== arregloStr[i][0].toUpperCase()) {
-        stringFinal += arregloStr[i][0].toUpperCase()
-        stringFinal += arregloStr[i].toString().substr(1)
-      } else {
-        stringFinal += arregloStr[i]
-      }
+
+    return
+  }
+
+  for (let i = 0; i < arregloStr.length; i++) {
+    if (arregloStr[i][0] !== arregloStr[i][0].toUpperCase()) {
+      stringFinal += arregloStr[i][0].toUpperCase()
+      stringFinal += arregloStr[i].toString().substr(1)
+    } else {
+      stringFinal += arregloStr[i]
     }
   }
 

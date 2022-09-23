@@ -21,11 +21,11 @@
 // Twenty Dollars	$20 |(TWENTY)
 // One-hundred Dollars	$100 |(ONE HUNDRED)
 
-function checkCashRegister(price, cash, cid) {
+const checkCashRegister = (price, cash, cid) => {
   let change = cash - price
   const aux = change
 
-  const validate = cid.reduce((acc, [key, value]) => acc + value, 0)
+  const validate = cid.reduce((acc, [, value]) => acc + value, 0)
 
   if (validate < aux) {
     return { status: 'INSUFFICIENT_FUNDS', change: [] }
@@ -36,7 +36,7 @@ function checkCashRegister(price, cash, cid) {
   }
 
   const currencyUnit = {
-    'ONE HUNDRED': 100,
+    ONE_HUNDRED: 100,
     TWENTY: 20,
     TEN: 10,
     FIVE: 5,
@@ -64,18 +64,17 @@ function checkCashRegister(price, cash, cid) {
 
   if (
     cid[3][1] + cid[2][1] + cid[1][1] + cid[0][1] < aux &&
-    result.length == 0
+    result.length === 0
   ) {
     return { status: 'INSUFFICIENT_FUNDS', change: [] }
-  } else {
-    while (change) {
-      for (let i = 3; i >= 0; i--) {
-        if (dollars[cid[i][0]] <= change && cid[i][1]) {
-          change = parseFloat((change - dollars[cid[i][0]]).toFixed(2))
-          cid[i][1] -= dollars[cid[i][0]]
-          result.push([cid[i][0], dollars[cid[i][0]]])
-          break
-        }
+  }
+  while (change) {
+    for (let i = 3; i >= 0; i--) {
+      if (dollars[cid[i][0]] <= change && cid[i][1]) {
+        change = parseFloat((change - dollars[cid[i][0]]).toFixed(2))
+        cid[i][1] -= dollars[cid[i][0]]
+        result.push([cid[i][0], dollars[cid[i][0]]])
+        break
       }
     }
   }

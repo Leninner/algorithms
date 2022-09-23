@@ -1,6 +1,6 @@
 import { recortText } from '../code/recortText'
 
-describe.skip('recortText', () => {
+describe('recortText', () => {
   test('La función tiene que retornar una porción de la cadena al pasarle un número', () => {
     expect(recortText('Hola mundo', 4)).toBe('Hola')
     expect(recortText('Leninner', 2)).toBe('Le')

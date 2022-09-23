@@ -20,8 +20,8 @@ const minimumDistances = (a: number[]): number => {
 
   return Math.min(
     ...Object.entries(distances)
-      .filter(([key, value]: any[]) => value[1])
-      .map(([key, value]: any[]) => value[0])
+      .filter(([, value]: any[]) => value[1])
+      .map(([, value]: any[]) => value[0])
   )
 }
 

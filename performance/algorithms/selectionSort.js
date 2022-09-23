@@ -5,7 +5,7 @@
  * Espacio auxiliar = Complexidad espacial - espacio temporal = O(1)
  */
 
-function selectionSort(array) {
+export const selectionSort = (array) => {
   // O(n)
   for (let i = 0; i < array.length; i++) {
     // O(1)

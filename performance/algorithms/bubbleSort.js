@@ -5,7 +5,7 @@
  * Espacio auxiliar = Complexidad espacial - espacio temporal = O(1)
  */
 
-function bubbleSort(array) {
+export const bubbleSort = (array) => {
   let swapped = true
   let j = 0
 

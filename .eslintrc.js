@@ -21,5 +21,7 @@ module.exports = {
     'no-magic-numbers': OPTIONS.OFF,
     // eslint-disable-next-line @typescript-eslint/naming-convention
     'no-extra-parens': OPTIONS.OFF,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    'no-param-reassign': OPTIONS.OFF,
   },
 }

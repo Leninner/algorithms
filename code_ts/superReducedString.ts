@@ -7,7 +7,7 @@
 
 // Usando un stack LIFO (Last in First Out)
 
-function superReducedString(s: string): string {
+const superReducedString = (s: string): string => {
   if (s === '') return 'Empty String'
   const results: string[] = []
 

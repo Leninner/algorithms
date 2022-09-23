@@ -1,4 +1,4 @@
-function gradingStudents(grades) {
+const gradingStudents = (grades) => {
   const array = []
   const aux = []
   const finalArray = []
@@ -7,7 +7,7 @@ function gradingStudents(grades) {
     if (grades[i] < 38) {
       array.push(grades[i])
     } else if (grades[i] % 5 !== 0) {
-      while (grades[i] % 5 != 0) {
+      while (grades[i] % 5 !== 0) {
         grades[i]++
       }
       array.push(grades[i])

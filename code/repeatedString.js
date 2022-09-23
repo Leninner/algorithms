@@ -18,22 +18,23 @@
 
 // Solución para N pequeños
 
-function repeatedString(s, n) {
-  s = s.split('')
-  let con = 0
+const repeatedString = (s, n) => {
+  const stringArray = s.split('')
+  const con = 0
   let i = 0
-  while (s.length < n) {
-    s.push(s[i])
+  while (stringArray.length < n) {
+    stringArray.push(stringArray[i])
     i++
   }
   s.filter(coincidencia)
-  function coincidencia(elemento) {
-    if (elemento == 'a') {
-      con++
-    }
-  }
-  console.log(con)
+
   return con
+}
+
+const coincidencia = (elemento) => {
+  if (elemento === 'a') {
+    con++
+  }
 }
 
 repeatedString('aba', 10)

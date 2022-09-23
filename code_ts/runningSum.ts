@@ -4,8 +4,8 @@
  * @output [1,3,6,10]
  */
 
-function runningSum(nums: number[]): number[] {
-  return nums.reduce((acc: number[], curr: number, index): number[] => {
+const runningSum = (nums: number[]): number[] =>
+  nums.reduce((acc: number[], curr: number, index): number[] => {
     let suma = 0
 
     for (let i = 0; i <= index; i++) {
@@ -16,7 +16,6 @@ function runningSum(nums: number[]): number[] {
 
     return acc
   }, [])
-}
 
 console.log(runningSum([1, 2, 3, 4])) // [1, 3, 6, 10]
 console.log(runningSum([1, 1, 1, 1, 1])) // [1, 2, 3, 4, 5]

@@ -2,7 +2,7 @@
 
 // cc = string para ponerle una máscara
 
-function maskify(cc) {
+const maskify = (cc) => {
   let string = ''
   for (let i = 0; i < cc.length - 4; i++) {
     string += '#'

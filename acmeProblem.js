@@ -47,14 +47,20 @@
 // When submitting your exercise, be sure to avoid including compiled files as this could be considered malware. Please include the proper instructions to compile your project in the README file.
 
 const weekSalary = {
-  'MO-TU-WE-TH-FR': {
+  MO_TU_WE_TH_FR: {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     25: [1, 9],
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     15: [9, 18],
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     20: [18, 0],
   },
-  'SA-SU': {
+  SA_SU: {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     30: [1, 9],
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     20: [9, 18],
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     25: [18, 0],
   },
 }
@@ -82,12 +88,25 @@ const getScheduleByDay = (schedule) =>
     {}
   )
 
-const getFinalSalaryPerEmployee = ({ MO, TU, WE, TH, FR, SA, SU }) =>
+const getFinalSalaryPerEmployee = ({
+  monday,
+  tuesday,
+  wendsday,
+  thursday,
+  friday,
+  saturday,
+  sunday,
+}) =>
   // Method to calculate the total salary for an employee avoiding undefined values
-  Object.values({ MO, TU, WE, TH, FR, SA, SU }).reduce(
-    (acc, curr) => curr ? acc + curr : acc,
-    0
-  )
+  Object.values({
+    monday,
+    tuesday,
+    wendsday,
+    thursday,
+    friday,
+    saturday,
+    sunday,
+  }).reduce((acc, curr) => (curr ? acc + curr : acc), 0)
 // Method to calculate the salary for a specific range
 const getSalaryForCurrentSchedule = ({
   range,
@@ -96,12 +115,13 @@ const getSalaryForCurrentSchedule = ({
   hoursWorked,
   salary,
 }) => {
+  let currentSalary = salary
   Object.entries(range).forEach(([salaryRange, [start, end]], index) => {
     if (
       start <= startHour &&
       (end === 0 ? 24 : end) >= (endHour < startHour ? endHour + 24 : endHour)
     ) {
-      salary += hoursWorked * salaryRange
+      currentSalary += hoursWorked * salaryRange
     }
 
     if (
@@ -112,7 +132,7 @@ const getSalaryForCurrentSchedule = ({
       if (start <= startHour && (end === 0 ? 24 : end) >= endHour) {
         const salaryValue = Object.keys(range)[index + 1]
 
-        salary +=
+        currentSalary +=
           ((end === 0 ? 24 : end) - startHour) * salaryRange +
           (hoursWorked - ((end === 0 ? 24 : end) - startHour)) *
             Number(salaryValue)
@@ -120,11 +140,11 @@ const getSalaryForCurrentSchedule = ({
     }
   })
 
-  return salary
+  return currentSalary
 }
 
 const getSalaryForEmployees = (employee) => {
-  const keys = ['MO-TU-WE-TH-FR', 'SA-SU']
+  const keys = ['MO_TU_WE_TH_FR', 'SA_SU']
   const [employeeName, schedule] = employee.split('=')
   const scheduleByDay = getScheduleByDay(schedule)
 
@@ -153,10 +173,28 @@ const getSalaryForEmployees = (employee) => {
       },
       {}
     )
-  ).reduce((acc, [employeeName, { MO, TU, WE, TH, FR, SA, SU }]) => {
-    const sum = getFinalSalaryPerEmployee({ MO, TU, WE, TH, FR, SA, SU })
-    return (acc += `The amount to pay ${employeeName} is: ${sum} USD\n`)
-  }, '')
+  ).reduce(
+    (
+      acc,
+      [
+        employeeName,
+        { monday, tuesday, wendsday, thursday, friday, saturday, sunday },
+      ]
+    ) => {
+      const sum = getFinalSalaryPerEmployee({
+        monday,
+        tuesday,
+        wendsday,
+        thursday,
+        friday,
+        saturday,
+        sunday,
+      })
+
+      return `${acc}The amount to pay ${employeeName} is: ${sum} USD\n`
+    },
+    ''
+  )
 }
 
 console.log(

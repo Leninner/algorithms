@@ -1,7 +1,7 @@
-function addTogether() {
+const addTogether = () => {
   if (
     typeof arguments[0] !== 'number' ||
-    arguments[1] && typeof arguments[1] !== 'number'
+    (arguments[1] && typeof arguments[1] !== 'number')
   ) {
     return undefined
   }
@@ -16,7 +16,5 @@ function addTogether() {
 const addFive = addTogether(5)
 
 console.log(addFive(2)) // 7
-
 console.log(addTogether(2, 3))
-
 console.log(addTogether('Leninner'))
