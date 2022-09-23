@@ -3,7 +3,7 @@
 <h1 align="center">Logical Problems</h1>
 
 <div align="center">
-   Solution for differents challengues in many platform like Hackerrank or Codewars
+   Solution for differents challengues in many platform like Hackerrank or Codewars done in JavaScript and TypeScript
 </div>
 
 <!-- TABLE OF CONTENTS -->
