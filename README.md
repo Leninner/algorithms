@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Logical Problems</h1>
+<h1 align="center">Challenges solved in JS and TS!</h1>
 
 <div align="center">
    Solution for differents challengues in many platform like Hackerrank or Codewars done in JavaScript and TypeScript
