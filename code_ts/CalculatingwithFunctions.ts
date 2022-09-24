@@ -38,4 +38,3 @@ console.log(eight(minus(three())))
 console.log(six(dividedBy(two())))
 
 // https://apuntes.de/typescript/parametros-opcionales/#gsc.tab=0
-clearImmediate

@@ -1,4 +1,4 @@
-const beautifulTriplets = (d: number, arr: number[]): number => {
+export const beautifulTriplets = (d: number, arr: number[]): number => {
   // Write your code here
   let cont = 0
 
@@ -15,7 +15,7 @@ const beautifulTriplets = (d: number, arr: number[]): number => {
   return cont
 }
 
-const anotherSolution = (d: number, arr: number[]) => {
+export const anotherSolution = (d: number, arr: number[]) => {
   let cont = 0
 
   for (let i = 0; i < arr.length; i++) {
@@ -24,6 +24,3 @@ const anotherSolution = (d: number, arr: number[]) => {
 
   return cont
 }
-
-console.log(beautifulTriplets(3, [1, 2, 4, 5, 7, 8, 10])) // 3
-console.log(anotherSolution(3, [1, 2, 4, 5, 7, 8, 10])) // 3
