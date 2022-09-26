@@ -1,4 +1,4 @@
-import jumpingOnClouds from '../code/jumpingOnClouds'
+import jumpingOnClouds from '../jumpingOnClouds'
 
 test('Debe dar un resultado correcto', () => {
   expect(jumpingOnClouds([0, 0, 1, 0, 0, 1, 1, 0], 2)).toBe(92)

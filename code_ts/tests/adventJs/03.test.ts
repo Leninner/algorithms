@@ -1,4 +1,4 @@
-import { isValid } from '../../code_ts/adventJs/03'
+import { isValid } from '../../adventJs/03'
 
 describe('AdventJS 03', () => {
   describe('The function', () => {
