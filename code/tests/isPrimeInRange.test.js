@@ -1,4 +1,4 @@
-import { isPrimeInRange } from '../../code/isPrimeInRange'
+import { isPrimeInRange } from '../isPrimeInRange'
 
 describe('isPrimeInRange', () => {
   test('Debe dar buenos resultados', () => {

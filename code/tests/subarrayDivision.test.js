@@ -1,4 +1,4 @@
-import { birthday } from '../code/subarrayDivision'
+import { birthday } from '../subarrayDivision'
 
 test('El ejercicio debe estar bien fundamentado', () => {
   expect(birthday([1, 2, 1, 3, 2], 3, 2)).toBe(2)

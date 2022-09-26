@@ -1,4 +1,4 @@
-import { reverse } from '../code/reverseInteger'
+import { reverse } from '../reverseInteger'
 
 test('Si el número es menor a 2**23 debe retornar un número revertido', () => {
   expect(reverse(-789)).toBe(-987)

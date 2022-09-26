@@ -1,4 +1,4 @@
-import { sumPairs } from '../../code_ts/adventJs/06'
+import { sumPairs } from '../../adventJs/06'
 
 describe('sumPairs tests', () => {
   describe('The function', () => {

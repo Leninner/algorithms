@@ -35,4 +35,4 @@ const sumOfTwoRevisited = (array, target) => {
   return 'No se encontró ningún par'
 }
 
-console.log(sumOfTwoRevisited([9, 6, 4, 2, 2, 2, 2, 2], 15))
+sumOfTwoRevisited([9, 6, 4, 2, 2, 2, 2, 2], 15)

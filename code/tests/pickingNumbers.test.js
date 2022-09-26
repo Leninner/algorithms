@@ -1,4 +1,4 @@
-import pickingNumbers from '../code/pickingNumbers'
+import pickingNumbers from '../pickingNumbers'
 
 test('Debe entregar un resultado acertado', () => {
   expect(pickingNumbers([4, 6, 5, 3, 3, 1])).toBe(3)

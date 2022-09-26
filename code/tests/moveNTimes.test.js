@@ -1,4 +1,4 @@
-import { moveNTimes } from '../code/moveNTimes.js'
+import { moveNTimes } from '../moveNTimes.js'
 
 describe('Función para mover N veces una letra', () => {
   test('Debe dar resultados correctos', () => {

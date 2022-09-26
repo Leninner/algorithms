@@ -1,4 +1,4 @@
-import { createXmasTree } from '../../code_ts/adventJs/04'
+import { createXmasTree } from '../../adventJs/04'
 
 describe('Draw a tree', () => {
   describe('The function', () => {

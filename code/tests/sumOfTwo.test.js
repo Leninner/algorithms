@@ -1,4 +1,4 @@
-import sumOfTwo from '../code/sumOfTwo'
+import sumOfTwo from '../sumOfTwo'
 
 test('Debe dar resultados correctos', () => {
   expect(sumOfTwo([1, 2, 3], 4)).toBe(true)

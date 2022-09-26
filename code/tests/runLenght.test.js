@@ -1,4 +1,4 @@
-import { runLength, runLenghtDecode } from '../code/runLength'
+import { runLength, runLenghtDecode } from '../runLength'
 
 describe('Los tests deben ser correctos', () => {
   test('Debe codificar el input', () => {

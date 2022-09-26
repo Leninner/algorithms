@@ -1,4 +1,4 @@
-import { perfectPower } from '../code/perfectPower.js'
+import { perfectPower } from '../perfectPower.js'
 
 describe('Is a perfect power', () => {
   const testCases = [

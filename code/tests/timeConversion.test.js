@@ -1,4 +1,4 @@
-import { timeConversion } from '../code/timeConversion'
+import { timeConversion } from '../timeConversion'
 
 it('Debería hacer conversiones correctas', () => {
   expect(timeConversion('12:05:45AM')).toBe('00:05:45')

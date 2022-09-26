@@ -1,4 +1,4 @@
-import { countingTheDaysBeforeChristmas } from '../../code_ts/adventJs/05'
+import { countingTheDaysBeforeChristmas } from '../../adventJs/05'
 
 describe('Counting the days before Christmas tests', () => {
   describe('The function', () => {

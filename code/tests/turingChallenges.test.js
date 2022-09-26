@@ -3,7 +3,7 @@ import {
   comprobateBrackets,
   moveNPositionClockwise,
   moveNPositionCounterClockwise,
-} from '../code/turingChallenges.js'
+} from '../turingChallenges.js'
 
 describe('Strange counter in basketball', () => {
   const testCases = [

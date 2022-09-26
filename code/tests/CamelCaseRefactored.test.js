@@ -1,4 +1,4 @@
-import camelcase from '../../code/CamelCaseRefactored'
+import camelcase from '../CamelCaseRefactored'
 
 test('Debe dar resultados correctos', () => {
   expect(camelcase('saveChangesInTheEditor')).toBe(5)

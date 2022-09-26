@@ -1,4 +1,4 @@
-import { utopianTree } from '../code/utopianTree'
+import { utopianTree } from '../utopianTree'
 
 test('should be correct', () => {
   expect(utopianTree(0)).toBe(1)
