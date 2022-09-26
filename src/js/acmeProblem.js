@@ -48,20 +48,14 @@
 
 const weekSalary = {
   MO_TU_WE_TH_FR: {
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    25: [1, 9],
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    15: [9, 18],
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    20: [18, 0],
+    [25]: [1, 9],
+    [15]: [9, 18],
+    [20]: [18, 0],
   },
   SA_SU: {
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    30: [1, 9],
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    20: [9, 18],
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    25: [18, 0],
+    [30]: [1, 9],
+    [20]: [9, 18],
+    [25]: [18, 0],
   },
 }
 
@@ -97,7 +91,6 @@ const getFinalSalaryPerEmployee = ({
   saturday,
   sunday,
 }) =>
-  // Method to calculate the total salary for an employee avoiding undefined values
   Object.values({
     monday,
     tuesday,
@@ -107,7 +100,7 @@ const getFinalSalaryPerEmployee = ({
     saturday,
     sunday,
   }).reduce((acc, curr) => (curr ? acc + curr : acc), 0)
-// Method to calculate the salary for a specific range
+
 const getSalaryForCurrentSchedule = ({
   range,
   startHour,
