@@ -1,4 +1,4 @@
-node_modules
-.vscode
-.env
 coverage
+node_modules
+.husky
+.vscode
