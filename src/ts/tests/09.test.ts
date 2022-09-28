@@ -26,9 +26,9 @@ describe('groupBy tests', () => {
       })
 
       it('the elements of the first argument must be grouped correctly', () => {
-        expect(groupBy([6.1, 4.2, 6.3], Math.floor)).toStrictEqual({
-          [6]: [6.1, 6.3],
+        expect(groupBy([6.1, 4.2, 6.3], Math.floor)).toEqual({
           [4]: [4.2],
+          [6]: [6.1, 6.3],
         })
         expect(
           groupBy([1397639141184, 1363223700000], (timestamp) =>

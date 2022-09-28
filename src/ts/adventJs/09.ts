@@ -18,13 +18,8 @@ export const groupBy = (
         break
     }
 
-    if (acc[key]) {
-      acc[key].push(curr)
-    } else {
-      acc[key] = [curr]
+    return {
+      ...acc,
+      [key]: acc[key] ? [...acc[key], curr] : [curr],
     }
-
-    console.log({ acc })
-
-    return acc
   }, {} as IGruopByType)
