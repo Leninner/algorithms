@@ -1,4 +1,4 @@
-import { groupBy } from '../adventJs/09'
+import { groupBy } from '../../adventJs/09'
 
 describe('groupBy tests', () => {
   describe('The function', () => {
