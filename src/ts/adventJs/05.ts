@@ -23,13 +23,11 @@ const DAYS_FROM_CHRISTMAS_TO_END_YEAR = 31 - CHRISTMAS_DATE.getDate()
 const DAYS_YEAR = 365
 
 export const countingTheDaysBeforeChristmas = (date: Date) => {
-  const isChristmas = date === CHRISTMAS_DATE
   const isDecember = date.getMonth() === CHRISTMAS_DATE.getMonth()
   const isBeforeChristmas = date < CHRISTMAS_DATE
   const daysInMonth = monthDays[date.getMonth()].days
   const daysLeftInMonth = daysInMonth - date.getDate()
 
-  if (isChristmas) return 0
   if (isDecember) return CHRISTMAS_DATE.getDate() - date.getDate()
   if (isBeforeChristmas) {
     const daysLeftInYear = monthDays
