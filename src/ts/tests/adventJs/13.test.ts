@@ -23,5 +23,12 @@ describe('wrapGifts tests', () => {
         '****',
       ])
     })
+
+    it("should acept emojis with only 2 characters, like '🎁'", () => {
+      const paramToTest = '🎁'
+      const result = wrapGifts([paramToTest])
+      expect(result).toEqual(['****', '*🎁*', '****'])
+      expect(paramToTest).toHaveLength(2)
+    })
   })
 })
