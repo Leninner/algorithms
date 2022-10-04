@@ -190,18 +190,12 @@ const getSalaryForEmployees = (employee) => {
   )
 }
 
-console.log(
-  getSalaryForEmployees(
-    'RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00'
-  )
-) // This works
+getSalaryForEmployees(
+  'RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00'
+)
 
-console.log(
-  getSalaryForEmployees('ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00')
-) // This also works
+getSalaryForEmployees('ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00')
 
-console.log(
-  getSalaryForEmployees(
-    'RENE=MO20:00-02:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00'
-  )
-) // This works
+getSalaryForEmployees(
+  'RENE=MO20:00-02:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00'
+)

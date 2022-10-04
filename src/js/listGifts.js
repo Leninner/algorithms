@@ -13,4 +13,4 @@ const listGifts = (letter) =>
     .filter((word) => Boolean(word) && !word.includes('_'))
     .reduce((acc, curr) => (acc[curr] ? acc[curr]++ : (acc[curr] = 1), acc), {})
 
-console.log(listGifts(carta))
+listGifts(carta)

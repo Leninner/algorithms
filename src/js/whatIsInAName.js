@@ -4,6 +4,7 @@ const whatIsInAName = (collection, source) => {
   Object.entries(source).map(([key, value]) => {
     for (let i = 0; i < collection.length; i++) {
       if (key in collection[i] && value === collection[i][key]) {
+        // eslint-disable-next-line no-console
         console.log('Lenin', collection[i][key], key)
       }
     }

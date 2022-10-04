@@ -33,4 +33,4 @@ const filter = (filter: string | number) =>
     }
   })
 
-console.log(filter(3))
+filter(3)

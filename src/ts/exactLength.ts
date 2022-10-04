@@ -3,4 +3,4 @@ const exactLength = (word: string): string[] => [
   word.slice(Math.floor(word.length / 2)),
 ]
 
-console.log(exactLength('Leninsin'))
+exactLength('Leninsin')

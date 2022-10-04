@@ -7,7 +7,6 @@
  */
 
 const kaprekarNumbers = (p: number, q: number): string => {
-  // Write your code here
   const kaprekarNumbers: number[] = []
 
   for (let i = p; i <= q; i++) {
@@ -25,4 +24,4 @@ const kaprekarNumbers = (p: number, q: number): string => {
     : 'INVALID RANGE'
 }
 
-console.log(kaprekarNumbers(1, 100))
+kaprekarNumbers(1, 100)

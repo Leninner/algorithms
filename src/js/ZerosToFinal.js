@@ -31,13 +31,13 @@ const ZerosToFinalRevisited = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === 0) {
       k++
-    } else {
-      newArray.push(arr[i])
     }
+
+    newArray.push(arr[i])
   }
 
   return newArray.concat(new Array(k).fill(0))
 }
 
-console.log(ZerosToFinal([1, 2, 0, 5, 9, 0, 1, 2, 0]))
-console.log(ZerosToFinalRevisited([1, 2, 0, 5, 9, 0, 1, 2, 0]))
+ZerosToFinal([1, 2, 0, 5, 9, 0, 1, 2, 0])
+ZerosToFinalRevisited([1, 2, 0, 5, 9, 0, 1, 2, 0])

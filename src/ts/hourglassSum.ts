@@ -59,5 +59,5 @@ const hourglassSum = (arr: number[][]): number => {
   return Math.max(...results)
 }
 
-console.log(hourglassSum(array2D))
-console.log(hourglassSum(anotherArray2D))
+hourglassSum(array2D)
+hourglassSum(anotherArray2D)

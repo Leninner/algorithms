@@ -32,12 +32,10 @@ const maxSequence2 = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i]
     min = Math.min(sum, min)
-    console.log(min)
     ans = Math.max(ans, sum - min)
-    console.log(ans)
   }
 
   return ans
 }
 
-console.log(maxSequence2([-2, 1, -3, 4, -1, 2, 1, -5, 4])) // 6
+maxSequence2([-2, 1, -3, 4, -1, 2, 1, -5, 4]) // 6

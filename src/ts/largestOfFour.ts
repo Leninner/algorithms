@@ -1,14 +1,12 @@
 const largestOfFour = (arr: number[][]): number[] =>
   arr.map((x) => Math.max(...x))
 
-console.log(
-  largestOfFour([
-    [4, 5, 1, 3],
-    [13, 27, 18, 26],
-    [32, 35, 37, 39],
-    [1000, 1001, 857, 1],
-  ])
-)
+largestOfFour([
+  [4, 5, 1, 3],
+  [13, 27, 18, 26],
+  [32, 35, 37, 39],
+  [1000, 1001, 857, 1],
+])
 
 const titleCase = (str: string) =>
   str
@@ -17,7 +15,7 @@ const titleCase = (str: string) =>
     .map((value) => `${value.charAt(0).toUpperCase()}${value.slice(1)}`)
     .join(' ')
 
-console.log(titleCase("I'm a little tea pot"))
+titleCase("I'm a little tea pot")
 
 const frankenSplice = (arr1: number[], arr2: number[], n: number) => {
   const newArr = [...arr2]
@@ -28,12 +26,12 @@ const frankenSplice = (arr1: number[], arr2: number[], n: number) => {
   return array.flat()
 }
 
-console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1))
+frankenSplice([1, 2, 3], [4, 5, 6], 1)
 
 const bouncer = (arr: Array<number | boolean | string>) =>
   arr.filter((value) => Boolean(value))
 
-console.log(bouncer([7, 'ate', '', false, 9]))
+bouncer([7, 'ate', '', false, 9])
 
 const getIndexToIns = (arr: number[], num: number) => {
   const orderedArr = arr.sort((a, b) => a - b)
@@ -49,7 +47,7 @@ const getIndexToIns = (arr: number[], num: number) => {
   return currentIndex
 }
 
-console.log(getIndexToIns([2, 5, 10], 15))
+getIndexToIns([2, 5, 10], 15)
 
 const mutation = (arr: string[]) =>
   arr[1]
@@ -69,4 +67,4 @@ const chunkArrayInGroups = (arr: string[], size: number) => {
   return newArr
 }
 
-console.log(chunkArrayInGroups(['a', 'b', 'c', 'd', 'e', 'f', 'g'], 2))
+chunkArrayInGroups(['a', 'b', 'c', 'd', 'e', 'f', 'g'], 2)

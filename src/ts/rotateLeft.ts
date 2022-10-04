@@ -23,5 +23,5 @@ const rotateLeft = (d: number, arr: number[]): number[] => {
 // Input: 2, [1, 2, 3, 4, 5]
 // Output: [3, 4, 5, 1, 2]
 
-console.log(rotateLeft(2, [1, 2, 3, 4, 5])) // [3, 4, 5, 1, 2]
-console.log(rotateLeft(9, [1, 2, 3, 4, 5])) // [5, 1, 2, 3, 4]
+rotateLeft(2, [1, 2, 3, 4, 5]) // [3, 4, 5, 1, 2]
+rotateLeft(9, [1, 2, 3, 4, 5]) // [5, 1, 2, 3, 4]

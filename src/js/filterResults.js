@@ -6,4 +6,4 @@
 const filterResults = (s, array) =>
   array.filter((value) => value.slice(0, s.length) === s)
 
-console.log(filterResults('de', ['dog', 'deer', 'deal']))
+filterResults('de', ['dog', 'deer', 'deal'])

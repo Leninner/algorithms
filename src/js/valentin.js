@@ -11,6 +11,7 @@ const array = [
 
 const printPhrase = () => {
   for (let i = 0; i < array.length; i++) {
+    // eslint-disable-next-line no-console
     console.log(array[i])
   }
 }

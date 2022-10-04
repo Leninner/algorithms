@@ -37,6 +37,9 @@ const composeNumber2 = (number) => {
   return result
 }
 
+// eslint-disable-next-line no-console
 console.time('Solution O(n^2)')
+// eslint-disable-next-line no-console
 console.log(composeNumber2(450004578945))
+// eslint-disable-next-line no-console
 console.timeEnd('Solution O(n^2)')

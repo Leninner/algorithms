@@ -25,6 +25,6 @@ const minimumDistances = (a: number[]): number => {
   )
 }
 
-console.log(minimumDistances([7, 1, 3, 4, 1, 7])) // 3 => 4 - 1 = 3
-console.log(minimumDistances([3, 2, 1, 2, 3])) // 2
-console.log(minimumDistances([1, 2, 3, 4, 5, 6])) // -1
+minimumDistances([7, 1, 3, 4, 1, 7]) // 3 => 4 -1 = 3
+minimumDistances([3, 2, 1, 2, 3]) // 2
+minimumDistances([1, 2, 3, 4, 5, 6]) // -1

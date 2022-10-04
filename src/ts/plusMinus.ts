@@ -5,7 +5,6 @@
  */
 
 const plusMinus = (arr: number[]): string => {
-  // Write your code here
   let result = ''
   let contNegative = 0
   let contPositive = 0
@@ -21,4 +20,4 @@ const plusMinus = (arr: number[]): string => {
   return result
 }
 
-console.log(plusMinus([-4, 3, -9, 0, 4, 1]))
+plusMinus([-4, 3, -9, 0, 4, 1])

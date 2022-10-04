@@ -12,10 +12,10 @@ const zeros = (n) => {
   return result
 }
 
-console.log(zeros(5))
-console.log(zeros(10))
-console.log(zeros(100))
-console.log(zeros(1000))
-console.log(zeros(10000))
-console.log(zeros(100000))
-console.log(zeros(1000000))
+zeros(5)
+zeros(10)
+zeros(100)
+zeros(1000)
+zeros(10000)
+zeros(100000)
+zeros(1000000)

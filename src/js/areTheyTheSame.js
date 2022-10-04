@@ -20,11 +20,9 @@ const comp = (array1, array2) => {
   )
 }
 
-console.log(
-  comp(
-    [121, 144, 19, 161, 19, 144, 19, 11],
-    [121, 14641, 20736, 361, 25921, 361, 20736, 361]
-  )
+comp(
+  [121, 144, 19, 161, 19, 144, 19, 11],
+  [121, 14641, 20736, 361, 25921, 361, 20736, 361]
 )
 
 const compRevisited = (array1, array2) => {
@@ -34,8 +32,6 @@ const compRevisited = (array1, array2) => {
   const orderedArrayTwo = array2
     .map((value) => Math.sqrt(value))
     .sort((a, b) => a - b)
-
-  console.log(orderedArrayOne, orderedArrayTwo)
 
   return JSON.stringify(orderedArrayOne) === JSON.stringify(orderedArrayTwo)
 }

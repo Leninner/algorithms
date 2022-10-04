@@ -41,4 +41,4 @@ const strangeCounter = (t) => {
 }
 
 // console.log(strangeCounter(4)); // 6
-console.log(strangeCounter(99999997668)) // 3079217434
+strangeCounter(99999997668) // 3079217434

@@ -12,4 +12,4 @@ const firstNonRepeatingLetter = (s) => {
   return s.length < 2 ? s : s[solution] || ''
 }
 
-console.log(firstNonRepeatingLetter('sTreSS'))
+firstNonRepeatingLetter('sTreSS')

@@ -18,10 +18,8 @@ const doSome = (x) => {
   return current
 }
 
-console.log(doSome(18))
-798441426
-console.log(doSome(21))
-15968828921
+doSome(18)
+doSome(21)
 
 const maxSubarrayProduct = (arr) => {
   const result = []

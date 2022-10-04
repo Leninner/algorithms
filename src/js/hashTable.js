@@ -107,9 +107,7 @@ const solution = (queryType, query) => {
 // ["insert", "addToValue", "get", "insert", "addToKey", "addToValue", "get"]
 // [[1, 2], [2], [1], [2, 3], [1], [-1], [3]]
 
-console.log(
-  solution(
-    ['insert', 'addToValue', 'get', 'insert', 'addToKey', 'addToValue', 'get'],
-    [[1, 2], [2], [1], [2, 3], [1], [-1], [3]]
-  )
-) // 6
+solution(
+  ['insert', 'addToValue', 'get', 'insert', 'addToKey', 'addToValue', 'get'],
+  [[1, 2], [2], [1], [2, 3], [1], [-1], [3]]
+)

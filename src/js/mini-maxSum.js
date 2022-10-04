@@ -22,7 +22,8 @@ export const miniMaxSum = (arr) => {
       min = arreglo[i]
     }
   }
-  console.log(min, max)
+
+  return [min, max]
 }
 
 // miniMaxSum([1, 3, 5, 7, 9]);
@@ -43,4 +44,4 @@ const multiplayIntegers = (array) => {
   return max
 }
 
-console.log(multiplayIntegers([-10, -10, 5, 2]))
+multiplayIntegers([-10, -10, 5, 2])

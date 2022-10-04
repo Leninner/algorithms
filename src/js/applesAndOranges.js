@@ -18,7 +18,8 @@ const countApplesAndOranges = (s, t, a, b, apples, oranges) => {
   for (let i = 0; i < posOranges.length; i++) {
     if (posOranges[i] >= s && posOranges[i] <= t) contOranges++
   }
-  console.log({ contApples, contOranges })
+
+  return { contApples, contOranges }
 }
 
 countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6])

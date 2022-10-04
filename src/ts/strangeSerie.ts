@@ -16,6 +16,7 @@ const strangeSerie = (a: number, b: number, n: number) => {
       aux += 2 ** j * b
     }
 
+    // eslint-disable-next-line no-console
     console.log(a + aux)
   }
 }

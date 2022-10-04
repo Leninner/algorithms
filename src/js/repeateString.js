@@ -1,10 +1,3 @@
-const repeatString = (number, string) => {
-  let result = ''
-  for (let i = 0; i < number; i++) {
-    result += string
-  }
+const repeatString = (number, string) => string.repeat(number)
 
-  return result
-}
-
-console.log(repeatString(4, 'Hello '))
+repeatString(4, 'Hello ')

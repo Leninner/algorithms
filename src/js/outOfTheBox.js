@@ -11,7 +11,8 @@ const menorOfTheNumber = (a, b) => {
     mayor--
     menor++
   }
-  console.log(menor)
+
+  return menor
 }
 
 menorOfTheNumber(56, 9)
@@ -19,10 +20,10 @@ menorOfTheNumber(12, 145)
 
 // Comprobar si dos números enteros positivos son iguales sin utilizar operadores de comparación ni, suma y resta.
 
-const equalNumbers = (a, b) => {
-  console.log(!(a ^ b)) // El OR exclusivo devuelve 0 cuando ambos elementos son iguales y 0 en Javascript es falso
+const equalNumbers = (a, b) =>
+  // El OR exclusivo devuelve 0 cuando ambos elementos son iguales y 0 en Javascript es falso
   // Por esta razón hago uso del operador NO
-}
+  !(a ^ b)
 
 equalNumbers(12, 112)
 equalNumbers(2, 2)
@@ -35,7 +36,8 @@ const intercambio = (a, b) => {
   auxA = auxA + auxB
   auxB = auxA - auxB
   auxA = auxA - auxB
-  console.log(auxA, auxB)
+
+  return [auxA, auxB]
 }
 
 intercambio(1, 85)
@@ -53,7 +55,7 @@ const sumasinSuma = (a, b) => {
   for (let i = 0; i < a + b; i++) {
     array.push(1)
   }
-  console.log(array.length)
+  return array.length
 }
 
 sumasinSuma(109, 1)

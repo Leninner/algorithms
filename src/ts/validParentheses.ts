@@ -14,8 +14,8 @@ const isClosing = (open: string, close: string) =>
   (open === '{' && close === '}') ||
   (open === '[' && close === ']')
 
-console.log(isValid('(')) // false
-console.log(isValid('())')) // false
-console.log(isValid('((({{{}}})))')) // true
-console.log(isValid('((({}})))()()')) // false
-console.log(isValid('())({}}{()][][')) // false
+isValid('(') // false
+isValid('())') // false
+isValid('((({{{}}})))') // true
+isValid('((({}})))()()') // false
+isValid('())({}}{()][][') // false

@@ -9,5 +9,5 @@ const breackCamelCase = (camelCase) =>
       ''
     )
 
-console.log(breackCamelCase('helloWorld')) // 'hello World'
-console.log(breackCamelCase('breakCamelCase')) // 'break Camel Case'
+breackCamelCase('helloWorld') // 'hello World'
+breackCamelCase('breakCamelCase') // 'break Camel Case'

@@ -21,5 +21,5 @@ const equalizeArray = (arr: number[]): number => {
   return result
 }
 
-console.log(equalizeArray([1, 2, 2, 3]))
-console.log(equalizeArray([3, 3, 2, 1, 3, 1, 1, 1, 1, 1, 1, 1]))
+equalizeArray([1, 2, 2, 3])
+equalizeArray([3, 3, 2, 1, 3, 1, 1, 1, 1, 1, 1, 1])

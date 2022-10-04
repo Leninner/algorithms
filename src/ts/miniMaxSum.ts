@@ -20,5 +20,5 @@ const miniMaxSum = (arr: number[]): string => {
   return [Math.min(...results), Math.max(...results)].join(' ')
 }
 
-console.log(miniMaxSum([1, 3, 5, 7, 9]))
-console.log(miniMaxSum([5, 5, 5, 5, 5]))
+miniMaxSum([1, 3, 5, 7, 9])
+miniMaxSum([5, 5, 5, 5, 5])

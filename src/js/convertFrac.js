@@ -25,4 +25,4 @@ const mcd = (x, y) => {
 
 const mcm = (a, b) => (!a || !b ? 0 : Math.abs((a * b) / mcd(a, b)))
 
-console.log(mcm(6, 7))
+mcm(6, 7)

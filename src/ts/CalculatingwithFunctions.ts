@@ -32,9 +32,9 @@ const dividedBy =
   (a: (x?: () => number) => any) => (b: (x?: () => number) => any) =>
     Math.floor(b() / a())
 
-console.log(seven(times(five())))
-console.log(four(plus(nine())))
-console.log(eight(minus(three())))
-console.log(six(dividedBy(two())))
+seven(times(five()))
+four(plus(nine()))
+eight(minus(three()))
+six(dividedBy(two()))
 
 // https://apuntes.de/typescript/parametros-opcionales/#gsc.tab=0

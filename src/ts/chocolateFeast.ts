@@ -21,7 +21,7 @@ const chocolateFeast = (n: number, c: number, m: number): number => {
   return totalBars
 }
 
-console.log(chocolateFeast(15, 3, 2)) // 9
-console.log(chocolateFeast(10, 2, 5)) // 6
-console.log(chocolateFeast(12, 4, 4)) // 3
-console.log(chocolateFeast(6, 2, 2)) // 5
+chocolateFeast(15, 3, 2) // 9
+chocolateFeast(10, 2, 5) // 6
+chocolateFeast(12, 4, 4) // 3
+chocolateFeast(6, 2, 2) // 5

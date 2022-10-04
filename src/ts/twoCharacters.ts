@@ -28,4 +28,4 @@ const alternate = (s: string): number => {
   return finalResult.length ? Math.max(...finalResult) : 0
 }
 
-console.log(alternate('asdcbsdcagfsdbgdfanfghbsfdab')) // 8
+alternate('asdcbsdcagfsdbgdfanfghbsfdab') // 8

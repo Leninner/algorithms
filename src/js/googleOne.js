@@ -26,7 +26,7 @@ const decodificar = (a, s) => {
     i = a[i]
   }
 
-  console.log(finalString)
+  return finalString
 }
 
 decodificar([3, 2, 0, 1], 'cdeo') // code

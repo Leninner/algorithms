@@ -33,6 +33,6 @@ const findSubstring = (s, k) => {
   return result
 }
 
-console.log(findSubstring('azerdii', 5))
-console.log(findSubstring('aeiouia', 3))
-console.log(findSubstring('caperqiitefg', 5))
+findSubstring('azerdii', 5)
+findSubstring('aeiouia', 3)
+findSubstring('caperqiitefg', 5)

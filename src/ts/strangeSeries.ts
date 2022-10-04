@@ -15,4 +15,4 @@ const getStrangeSum = (indexOne: number, indexTwo: number) => {
   return numberOne + numberTwo
 }
 
-console.log(getStrangeSum(2, 2)) // 12
+getStrangeSum(2, 2) // 12

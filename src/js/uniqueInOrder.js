@@ -11,4 +11,4 @@ const uniqueInOrder = (iterable) =>
         return acc
       }, [])
 
-console.log(uniqueInOrder('AAAAAABBBBAAAAaBBBC'))
+uniqueInOrder('AAAAAABBBBAAAAaBBBC')

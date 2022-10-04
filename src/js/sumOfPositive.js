@@ -8,4 +8,4 @@ const sumOfPositive = (arrayOfNumbers) =>
     return sum
   }, 0)
 
-console.log(sumOfPositive([1, 2, 4, -7, -8, 9]))
+sumOfPositive([1, 2, 4, -7, -8, 9])

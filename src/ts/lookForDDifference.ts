@@ -9,4 +9,4 @@ const lookForDDifference = (sortedArray: number[], d: number): number[] => {
   return []
 }
 
-console.log(lookForDDifference([1, 3, 3, 4, 5, 6, 7, 12, 13, 100], 1))
+lookForDDifference([1, 3, 3, 4, 5, 6, 7, 12, 13, 100], 1)

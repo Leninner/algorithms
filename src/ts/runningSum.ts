@@ -17,5 +17,5 @@ const runningSum = (nums: number[]): number[] =>
     return acc
   }, [])
 
-console.log(runningSum([1, 2, 3, 4])) // [1, 3, 6, 10]
-console.log(runningSum([1, 1, 1, 1, 1])) // [1, 2, 3, 4, 5]
+runningSum([1, 2, 3, 4]) // [1, 3, 6, 10]
+runningSum([1, 1, 1, 1, 1]) // [1, 2, 3, 4, 5]

@@ -29,10 +29,7 @@ const migratoryBirds = (arr) => {
     }
   }
   for (let i = 0; i < cantidad.length; i++) {
-    if (mayor === cantidad[i]) {
-      console.log(i + 1)
-      break
-    }
+    if (mayor === cantidad[i]) break
   }
 }
 

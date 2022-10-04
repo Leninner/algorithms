@@ -18,7 +18,6 @@ const howManyGames = (p, d, m, s) => {
     p = Math.max(p - d, m) // El método Math.max devuelve el mayor entre 2 números
     games += 1
   }
-  console.log(games - 1)
 
   // NOTE: Solución deficiente
 
@@ -41,6 +40,8 @@ const howManyGames = (p, d, m, s) => {
   //     }
   //     return cont;
   // }
+
+  return games - 1
 }
 
 howManyGames(20, 3, 6, 70) // 5 games

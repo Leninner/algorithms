@@ -27,8 +27,6 @@ const cutTheSticks = (arr) => {
   for (let i = 0; i < newArray.length; ++i) {
     stickCutCount++
 
-    console.log({ newArray, currentLower })
-
     if (currentLower === newArray[i]) {
       newArray.splice(i, 1)
       i--
@@ -47,6 +45,6 @@ const cutTheSticks = (arr) => {
   return stickCutArray
 }
 
-console.log(cutTheSticks([5, 4, 4, 2, 2, 8]))
-console.log(cutTheSticks([1, 2, 3, 4, 3, 3, 2, 1]))
-console.log(cutTheSticks([1, 2, 3]))
+cutTheSticks([5, 4, 4, 2, 2, 8])
+cutTheSticks([1, 2, 3, 4, 3, 3, 2, 1])
+cutTheSticks([1, 2, 3])

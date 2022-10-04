@@ -8,14 +8,12 @@ export const highAndLow = (numbers) => {
   const arrayOfNumbers = numbers.split(' ')
 
   const max = arrayOfNumbers.reduce((acc, curr) => {
-    // eslint-disable-next-line no-param-reassign
     acc = Math.max(acc, curr)
 
     return acc
   })
 
   const min = arrayOfNumbers.reduce((acc, curr) => {
-    // eslint-disable-next-line no-param-reassign
     acc = Math.min(acc, curr)
 
     return acc
@@ -23,8 +21,6 @@ export const highAndLow = (numbers) => {
 
   return [max, min].join(' ')
 }
-
-// another solution
 
 const highAndLow2 = (numbers) => {
   const arrayOfNumbers = numbers.split(' ').map(Number)
@@ -34,4 +30,4 @@ const highAndLow2 = (numbers) => {
   return `${max} ${min}`
 }
 
-console.log(highAndLow2('4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'))
+highAndLow2('4 5 29 54 4 0 -214 542 -64 1 -3 6 -6')

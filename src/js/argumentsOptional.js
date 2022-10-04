@@ -15,6 +15,6 @@ const addTogether = () => {
 
 const addFive = addTogether(5)
 
-console.log(addFive(2)) // 7
-console.log(addTogether(2, 3))
-console.log(addTogether('Leninner'))
+addFive(2)
+addTogether(2, 3)
+addTogether('Leninner')

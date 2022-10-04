@@ -40,7 +40,7 @@ const toCamelCase = (str) => {
   return stringFinal
 }
 
-console.log(toCamelCase('the_stealth_warrior')) // "theStealthWarrior"
-console.log(toCamelCase('The-Stealth-Warrior')) // "TheStealthWarrior"
-console.log(toCamelCase('A-B-C')) // "ABC"
-console.log(toCamelCase(''))
+toCamelCase('the_stealth_warrior') // "theStealthWarrior"
+toCamelCase('The-Stealth-Warrior') // "TheStealthWarrior"
+toCamelCase('A-B-C') // "ABC"
+toCamelCase('')

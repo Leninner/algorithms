@@ -11,4 +11,4 @@ const getCount = (str) => {
   return emparejamientos.length
 }
 
-console.log(getCount('my pyx')) // 0
+getCount('my pyx') // 0

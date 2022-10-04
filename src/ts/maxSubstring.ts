@@ -28,7 +28,7 @@ const maxSubstring = (s: string): string => {
   )
 }
 
-console.log(maxSubstring('aaabccc'))
-console.log(maxSubstring('efgabzafklmneaklj'))
-console.log(maxSubstring('leninner'))
-console.log(maxSubstring('DayanaCandilejo'))
+maxSubstring('aaabccc')
+maxSubstring('efgabzafklmneaklj')
+maxSubstring('leninner')
+maxSubstring('DayanaCandilejo')

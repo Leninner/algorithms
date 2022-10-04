@@ -15,4 +15,4 @@ const twoSum = (
   return 'No se encontró la suma'
 }
 
-console.log(twoSum([2, 7, 11, 15], 8)) // [0, 1]
+twoSum([2, 7, 11, 15], 8) // [0, 1]

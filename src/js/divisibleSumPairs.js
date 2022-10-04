@@ -7,7 +7,7 @@ const divisibleSumPairs = (n, k, ar) => {
       }
     }
   }
-  console.log(con)
+
   return con
 }
 

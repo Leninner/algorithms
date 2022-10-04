@@ -23,8 +23,6 @@ const superReducedString = (s: string): string => {
   return results.join('') || 'Empty String'
 }
 
-console.log(
-  superReducedString(
-    'zztqooauhujtmxnsbzpykwlvpfyqijvdhuhiroodmuxiobyvwwxupqwydkpeebxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh'
-  )
+superReducedString(
+  'zztqooauhujtmxnsbzpykwlvpfyqijvdhuhiroodmuxiobyvwwxupqwydkpeebxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh'
 )

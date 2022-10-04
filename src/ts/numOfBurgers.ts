@@ -25,16 +25,16 @@ const numOfBurgers = (tomatoSlices: number, cheeseSlices: number): number[] => {
     : []
 }
 
-console.log(numOfBurgers(16, 7))
-console.log(numOfBurgers(4, 17))
-console.log(numOfBurgers(17, 4))
-console.log(numOfBurgers(17, 9))
-console.log(numOfBurgers(20, 8)) // [0, 0]
-console.log(numOfBurgers(7, 11)) // [0, 0]
-console.log(numOfBurgers(32, 17)) // [0, 0]
-console.log(numOfBurgers(1, 1)) // [1, 0]
-console.log(numOfBurgers(2, 1)) // [0, 1]
-console.log(numOfBurgers(1, 2)) // [0, 0]
-console.log(numOfBurgers(2, 2)) // [0, 0]
-console.log(numOfBurgers(3, 2)) // [0, 0]
-console.log(numOfBurgers(6, 2)) // [1, 1]
+numOfBurgers(16, 7)
+numOfBurgers(4, 17)
+numOfBurgers(17, 4)
+numOfBurgers(17, 9)
+numOfBurgers(20, 8) // [0, 0]
+numOfBurgers(7, 11) // [0, 0]
+numOfBurgers(32, 17) // [0, 0]
+numOfBurgers(1, 1) // [1, 0]
+numOfBurgers(2, 1) // [0, 1]
+numOfBurgers(1, 2) // [0, 0]
+numOfBurgers(2, 2) // [0, 0]
+numOfBurgers(3, 2) // [0, 0]
+numOfBurgers(6, 2) // [1, 1]

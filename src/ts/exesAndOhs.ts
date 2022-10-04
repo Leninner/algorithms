@@ -22,11 +22,11 @@ const xo = (str: string): boolean =>
 
   str.toLowerCase().split('x').length === str.toLowerCase().split('o').length
 
-console.log(xo('XOOxxoo'))
-console.log(xo('xooxx'))
-console.log(xo('ooxXm'))
-console.log(xo('zpzpzpp'))
-console.log(xo('x0'))
-console.log(xo('xxxooo'))
-console.log(xo('xXxXoOoO'))
-console.log(xo('z'))
+xo('XOOxxoo')
+xo('xooxx')
+xo('ooxXm')
+xo('zpzpzpp')
+xo('x0')
+xo('xxxooo')
+xo('xXxXoOoO')
+xo('z')

@@ -21,6 +21,6 @@ const DNAStrand = (dna) => {
   return arregloDNA.join('')
 }
 
-console.log(DNAStrand('AAAA')) // TTTT
-console.log(DNAStrand('ATTGC')) // TAACG
-console.log(DNAStrand('GTAT')) // CATA
+DNAStrand('AAAA') // TTTT
+DNAStrand('ATTGC') // TAACG
+DNAStrand('GTAT') // CATA

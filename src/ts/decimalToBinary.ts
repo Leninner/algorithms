@@ -10,7 +10,7 @@ const decimalToBinary = (decimalNumber: number) => {
   return binaryNumber.concat(quotient.toString()).split('').reverse().join('')
 }
 
-console.log(decimalToBinary(10)) // 1010
-console.log(decimalToBinary(20)) // 10100
-console.log(decimalToBinary(100)) // 1100100
-console.log(decimalToBinary(1000)) // 1111101000
+decimalToBinary(10) // 1010
+decimalToBinary(20) // 10100
+decimalToBinary(100) // 1100100
+decimalToBinary(1000) // 1111101000

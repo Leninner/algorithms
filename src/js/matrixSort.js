@@ -100,4 +100,4 @@ const matrix = [
   [-5, -6, 7, -2],
 ]
 
-console.log(sortBoundaryWise(matrix))
+sortBoundaryWise(matrix)

@@ -14,4 +14,4 @@ const libraryFine = (d1, m1, y1, d2, m2, y2) => {
   return fine
 }
 
-console.log(libraryFine(2, 7, 1014, 1, 1, 1015))
+libraryFine(2, 7, 1014, 1, 1, 1015)
