@@ -59,9 +59,9 @@ const weekSalary = {
   },
 }
 
-const getScheduleByDay = (schedule) =>
+const getScheduleByDay = (schedule: string) =>
   schedule.split(',').reduce(
-    (acc, curr) => ({
+    (acc: any, curr) => ({
       ...acc,
       [curr.slice(0, 2)]: {
         ...acc[curr.slice(0, 2)],
@@ -90,6 +90,8 @@ const getFinalSalaryPerEmployee = ({
   friday,
   saturday,
   sunday,
+}: {
+  [key: string]: any
 }) =>
   Object.values({
     monday,
@@ -107,6 +109,8 @@ const getSalaryForCurrentSchedule = ({
   endHour,
   hoursWorked,
   salary,
+}: {
+  [key: string]: any
 }) => {
   let currentSalary = salary
   Object.entries(range).forEach(([salaryRange, [start, end]], index) => {
@@ -136,14 +140,19 @@ const getSalaryForCurrentSchedule = ({
   return currentSalary
 }
 
-const getSalaryForEmployees = (employee) => {
+const getSalaryForEmployees = (employee: string) => {
   const keys = ['MO_TU_WE_TH_FR', 'SA_SU']
   const [employeeName, schedule] = employee.split('=')
   const scheduleByDay = getScheduleByDay(schedule)
 
   return Object.entries(
     Object.entries(scheduleByDay).reduce(
-      (acc, [day, { hoursRange, hoursWorked }]) => {
+      (
+        acc: {
+          [key: string]: any
+        },
+        [day, { hoursRange, hoursWorked }]: [string, any]
+      ) => {
         const [startHour, endHour] = hoursRange
         const key = keys.find((key) => key.includes(day))
         const posibleRanges = weekSalary[key]
