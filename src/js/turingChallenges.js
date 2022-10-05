@@ -51,25 +51,25 @@ export const moveNPositionCounterClockwise = (k, nums) => {
   return nums.concat(portion)
 }
 
-export const sumLeftLeavesInABinaryTree = (root) => {
-  if (!root) return 0
+// export const sumLeftLeavesInABinaryTree = (root) => {
+//   if (!root) return 0
 
-  let sum = 0
+//   let sum = 0
 
-  const traverse = (node) => {
-    if (node.left) {
-      if (!node.left.left && !node.left.right) {
-        sum += node.left.val
-      }
-      traverse(node.left)
-    }
+//   const traverse = (node) => {
+//     if (node.left) {
+//       if (!node.left.left && !node.left.right) {
+//         sum += node.left.val
+//       }
+//       traverse(node.left)
+//     }
 
-    if (node.right) {
-      traverse(node.right)
-    }
-  }
+//     if (node.right) {
+//       traverse(node.right)
+//     }
+//   }
 
-  traverse(root)
+//   traverse(root)
 
-  return sum
-}
+//   return sum
+// }
