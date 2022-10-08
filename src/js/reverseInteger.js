@@ -8,7 +8,7 @@
  * @return {number}
  */
 
-const reverse = (number) => {
+export const reverse = (number) => {
   if (number < 0) {
     return parseInt(`-${number.toString().split('').reverse().join('')}`)
   }
@@ -17,5 +17,3 @@ const reverse = (number) => {
     ? 0
     : parseInt(number.toString().split('').reverse().join(''))
 }
-
-export { reverse }
