@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript
 
-const zeros = (n) => {
+const zeros = (n: number) => {
   let result = 0
   let x = 1
 

@@ -4,7 +4,7 @@
  * @returns {arr} array of numbers with zeros at the end
  */
 
-const ZerosToFinal = (arr) => {
+const ZerosToFinal = (arr: number[]): number[] => {
   let y = arr.length - 1
   let aux = 0
   let tope = arr.length
@@ -24,7 +24,7 @@ const ZerosToFinal = (arr) => {
   return arr
 }
 
-const ZerosToFinalRevisited = (arr) => {
+const ZerosToFinalRevisited = (arr: number[]) => {
   let k = 0
   const newArray = []
 

@@ -1,4 +1,4 @@
-export const runLength = (str) => {
+export const runLength = (str: string) => {
   const contAndLetters = []
   let cont = 1
 
@@ -14,7 +14,7 @@ export const runLength = (str) => {
   return contAndLetters.flat().join('')
 }
 
-export const runLenghtDecode = (str) => {
+export const runLenghtDecode = (str: string) => {
   let result = ''
   for (let i = 0; i < str.length; i += 2) {
     for (let y = 0; y < parseInt(str[i]); y++) {

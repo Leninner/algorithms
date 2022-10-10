@@ -1,7 +1,7 @@
 import { runLength, runLenghtDecode } from '../runLength'
 
 describe('Los tests deben ser correctos', () => {
-  test('Debe codificar el input', () => {
+  it('Debe codificar el input', () => {
     expect(runLength('AAAABBBCCDAA')).toBe('4A3B2C1D2A')
     expect(runLength('ABBCcAD')).toBe('1A2B1C1c1A1D')
     expect(runLength('aabbccdd')).toBe('2a2b2c2d')
@@ -11,7 +11,7 @@ describe('Los tests deben ser correctos', () => {
     )
   })
 
-  test('Debe decodificar el input', () => {
+  it('Debe decodificar el input', () => {
     expect(runLenghtDecode('4A3B2C1D2A')).toBe('AAAABBBCCDAA')
     expect(runLenghtDecode('1A2B1C1c1A1D')).toBe('ABBCcAD')
     expect(runLenghtDecode('2a2b2c2d')).toBe('aabbccdd')

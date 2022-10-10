@@ -2,7 +2,5 @@
 // k = mínima de estudiantes
 // a = array con tiempo de entrada de cada estudiante
 
-const angryProfessor = (k, a) =>
+export const angryProfessor = (k: number, a: number[]) =>
   a.filter((e) => e <= 0).length >= k ? 'NO' : 'YES'
-
-export { angryProfessor }
