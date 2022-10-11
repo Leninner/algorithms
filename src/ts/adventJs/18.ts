@@ -10,7 +10,8 @@ export const fixFiles = (files: string[]): string[] => {
     }
 
     const fileWithNumberOfRepetition = `${file}(${duplicatedFiles[file]})`
-    result.push(duplicatedFiles[file] > 0 ? fileWithNumberOfRepetition : file)
+    const isDuplicated = duplicatedFiles[file] > 0
+    result.push(isDuplicated ? fileWithNumberOfRepetition : file)
   }
 
   return result
