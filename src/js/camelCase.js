@@ -1,10 +1,7 @@
 const toCamelCase = (str) => {
+  if (str === '') return ''
   let arregloStr
   let stringFinal = ''
-
-  if (str === '') {
-    return ''
-  }
 
   if (str.includes('_')) {
     arregloStr = str.split('_')
