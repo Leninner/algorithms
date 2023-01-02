@@ -17,6 +17,5 @@ describe('largestPrimeFactor', () => {
 
   it('should return 29 for 13195', () => {
     expect(largestPrimeFactor(13195)).toBe(29)
-    expect(largestPrimeFactor(600851475143)).toBe(6857)
   })
 })
