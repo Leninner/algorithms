@@ -2,7 +2,7 @@ import {
   getDiffBetweenDoubleAndPlainSum,
   getDoubleSumTillN,
   getPlainSumTillN,
-} from '../04'
+} from '../06'
 
 describe('04 project euler tests', () => {
   describe('When the getPlainSumStillN method is called', () => {
