@@ -1,8 +1,4 @@
-import {
-  isMultipleOf3,
-  isMultipleOf5,
-  sumOfMultiplesOf3And5,
-} from '../multipleOf3And5'
+import { isMultipleOf3, isMultipleOf5, sumOfMultiplesOf3And5 } from '../01'
 
 describe('multipleOf3and5 tests', () => {
   describe('When the isMultipleOf3 is called', () => {
