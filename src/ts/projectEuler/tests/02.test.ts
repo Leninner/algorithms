@@ -1,4 +1,4 @@
-import { generateFibonacci, sumOfEvenFibNumber } from '../evenFibonacciNumbers'
+import { generateFibonacci, sumOfEvenFibNumber } from '../02'
 
 describe('evenFibonacciNumbers tests', () => {
   describe('When the generateFibonacci is called', () => {
