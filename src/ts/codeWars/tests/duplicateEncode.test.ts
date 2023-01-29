@@ -1,4 +1,4 @@
-import { duplicateEncode } from './duplicateEncode'
+import { duplicateEncode } from '../duplicateEncode'
 
 describe('duplicateEncode tests', () => {
   describe('The function', () => {
