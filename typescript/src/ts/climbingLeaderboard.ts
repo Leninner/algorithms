@@ -12,7 +12,6 @@ export const climbingLeaderboard = (
   let temporalPositionRanked = rankedLength - 1
 
   for (let i = temporalPositionPlayer; i < playerLength; i++) {
-    if (player[i] === player[i + 1]) continue
     for (let y = temporalPositionRanked; y >= 0; y--) {
       if (player[i] < rankedWithUniquePositions[y]) {
         if (player[i] === rankedWithUniquePositions[y + 1]) {
