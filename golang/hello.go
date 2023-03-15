@@ -16,6 +16,9 @@ func main() {
 
 	fmt.Println(sayMyFriends(friends))
 	fmt.Println(sayMyFriendsAge(friendsAge))
+
+	parentsAge := []int{50, 51}
+	fmt.Println(sayMyParentsAge(parentsAge))
 }
 
 func sayHelloTo(name string) string {
