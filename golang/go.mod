@@ -1,3 +1,3 @@
-module example/golang
+module learning/go
 
 go 1.19
