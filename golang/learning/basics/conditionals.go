@@ -52,4 +52,19 @@ func main() {
 	default:
 		println("default")
 	}
+
+	// if with more than one condition
+	if true && true {
+		println("true")
+	}
+
+	// if with more than one condition
+	if true || false {
+		println("true")
+	}
+
+	// if with more than one condition
+	if true || false && false {
+		println("true")
+	}
 }
