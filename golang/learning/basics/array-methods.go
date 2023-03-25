@@ -65,4 +65,17 @@ func main() {
 	slicedWords := wordsToSlice[1:3]
 
 	fmt.Println(slicedWords, wordsToSlice)
+
+	// indexOf
+	wordsToIndexOf := []string{"h", "e", "l", "l", "o"}
+	index := -1
+
+	for i, v := range wordsToIndexOf {
+		if v == "l" {
+			index = i
+			break
+		}
+	}
+
+	fmt.Println(index)
 }
