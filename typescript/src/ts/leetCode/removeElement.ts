@@ -8,3 +8,20 @@ export const removeElement = (nums: number[], val: number): number => {
 
   return nums.length
 }
+
+export const removeElementRevisited = (nums: number[], val: number): number => {
+  let i = 0
+
+  for (let j = 0; j < nums.length; j++) {
+    // check if the current element is not equal to the value
+    if (nums[j] !== val) {
+      const temp = nums[i]
+      nums[i] = nums[j]
+      nums[j] = temp
+
+      i++
+    }
+  }
+
+  return i
+}
