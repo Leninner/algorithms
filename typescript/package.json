@@ -4,6 +4,7 @@
   "description": "Solución a algunos ejercicios de Hackerrank, Leetcode, Codewars y otras plataformas de codificación.",
   "scripts": {
     "test": "jest",
+    "run-single": "ts-node ",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "preupdate": "git commit -a  -m '[UPDATE] files'",
