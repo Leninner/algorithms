@@ -1,14 +1,23 @@
 // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/wherefore-art-thou
 
 const whatIsInAName = (collection, source) => {
-  Object.entries(source).map(([key, value]) => {
-    for (let i = 0; i < collection.length; i++) {
-      if (key in collection[i] && value === collection[i][key]) {
-        // eslint-disable-next-line no-console
-        console.log('Lenin', collection[i][key], key)
+  const results = []
+
+  collection.forEach((item) => {
+    let found = true
+
+    Object.keys(source).forEach((key) => {
+      if (item[key] !== source[key]) {
+        found = false
       }
+    })
+
+    if (found) {
+      results.push(item)
     }
   })
+
+  return results
 }
 
 // whatIsInAName(

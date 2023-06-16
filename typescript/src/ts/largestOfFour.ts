@@ -28,8 +28,7 @@ const frankenSplice = (arr1: number[], arr2: number[], n: number) => {
 
 frankenSplice([1, 2, 3], [4, 5, 6], 1)
 
-const bouncer = (arr: Array<number | boolean | string>) =>
-  arr.filter((value) => Boolean(value))
+const bouncer = (arr: Array<number | boolean | string>) => arr.filter(Boolean)
 
 bouncer([7, 'ate', '', false, 9])
 
