@@ -2,7 +2,6 @@
 package revrot
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -19,7 +18,6 @@ func Revrot(s string, n int) string {
 		}
 
 		subString := s[i : i+n]
-		fmt.Println(subString)
 
 		isDivisibleByTwo := sumOfCubes(subString)%2 == 0
 
@@ -29,8 +27,6 @@ func Revrot(s string, n int) string {
 			chunks = append(chunks, rotateByOne(subString))
 		}
 	}
-
-	fmt.Println(chunks)
 
 	return strings.Join(chunks, "")
 }
