@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -53,15 +52,4 @@ func IntegerToRoman(number int) string {
 	}
 
 	return result
-}
-
-func main() {
-	fmt.Println(IntegerToRoman(15))   // XV
-	fmt.Println(IntegerToRoman(16))   // XVI
-	fmt.Println(IntegerToRoman(19))   // XVI
-	fmt.Println(IntegerToRoman(29))   // XVI
-	fmt.Println(IntegerToRoman(500))  // D
-	fmt.Println(IntegerToRoman(129))  // CXXIX
-	fmt.Println(IntegerToRoman(3749)) // MMMDCCXLIX
-	fmt.Println(IntegerToRoman(999))  // CMXCIX
 }
